@@ -1,0 +1,33 @@
+application: green-tomatoe
+version: 1
+runtime: python
+api_version: 1
+
+builtins:
+- remote_api: on
+
+inbound_services:
+- warmup
+
+handlers:
+- url: /remote_api
+  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
+  login: admin
+
+- url: /favicon.ico
+  static_files: static/img/mini-logo.jpg
+  upload: static/img
+
+- url: /static
+  static_dir: static
+
+- url: /_ah/queue/deferred
+  script: djangoappengine/deferred/handler.py
+  login: admin
+
+- url: /media/admin
+  static_dir: django/contrib/admin/media
+  expiration: '0'
+
+- url: /.*
+  script: djangoappengine/main/main.py
