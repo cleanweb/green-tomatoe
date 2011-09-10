@@ -5,6 +5,19 @@ from django.utils import simplejson
 from django.utils.encoding import force_unicode
 from django.utils.functional import Promise
 
+
+class RESTBase(object):
+    def __call__(self, request, *args, **kwargs):
+        return getattr(self, request.method.lower())(request, *args, **kwargs)
+
+    @classmethod
+    def get(request, *args, **kwargs):
+        return HttpResponse('Not supported')
+
+    @classmethod
+    def post(request, *args, **kwargs):
+        return HttpResponse('Not supported') 
+
 class LazyEncoder(DjangoJSONEncoder):
     def default(self, obj):
         if isinstance(obj, Promise):
