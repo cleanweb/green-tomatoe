@@ -155,7 +155,11 @@ var DataSnaphotsView = Backbone.View.extend({
           fields: ["Housingunits","Homeownershiprate","Housingunitsinmultiunitstructurespercent","Medianvalueofowneroccupiedhousingunits"]},
         { id:"Household",
           title:"Household", 
-          fields: ["Households","Personsperhousehold","Percapitamoneyincomeinpastmonthsdollars","Medianhouseholdincome","Personsbelowpovertylevelpercent"]}];
+          fields: ["Households","Personsperhousehold","Percapitamoneyincomeinpastmonthsdollars","Medianhouseholdincome","Personsbelowpovertylevelpercent"]},
+        { id:"Playground",
+          title:"Playground", 
+          fields: []}];
+
     this.additionalViews = [
         { id:"Business",
           title:"Business",

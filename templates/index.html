@@ -17,6 +17,13 @@
                 .span11.columns{width:690px;}
                 ul.tabs {height:36px;}
                 .dropdown-menu li.active a{background:#BFBFBF;color:black;}
+                .field-search-query-container {padding: 0 0 18px 0;}
+                .field-search-query-container input[type=text]{width: 100%;height:30px;}
+                .field-search-results{margin:0; max-height:205px; overflow:hidden; overflow-y: scroll;}
+                .field-search-results.active{border-top: 1px solid #ddd;}
+
+                .ui-autocomplete{list-style:none; padding:0;}
+                .field-search-results, .field-search-results li{width:100%!important;}
 
 	</style>
 	
@@ -24,7 +31,7 @@
 	<script type="text/javascript" src="/static/js/json2.js"></script>
 	<script type="text/javascript" src="/static/js/underscore.js"></script>
 	<script type="text/javascript" src="/static/js/backbone.js"></script>
-	<script type="text/javascript" src="/static/js/tomatoe.js"></script>
+	<script type="text/javascript" src="/static/js/tomatoe.js"></script>        
 	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript" src="/static/js/charts.js"></script>
@@ -60,6 +67,18 @@
     <div id="content" class="span11 columns">
         <div id="content_nav"></div>
         <h2 id="view_header"></h2>    	
+        <div class="custom-fields-container well" style="display:none;">
+            <div class="field-search-query-container">                
+                <input type="text" class="xlarge" size="30" id="field-search-qry"/>                                
+            </div>
+            <ul class="pills field-search-results">
+                {% for column in columns %}
+                    <li data-code="{{ column.code }}" class="playground-field-container">
+                        <a href="#" data-code="{{ column.code }}" class="custom-field-selector" >{{ column.description }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
         <div id="switch_view_container" class="well" style="padding: 14px 19px;">
             <button data-perspective="table" class="btn change-persective">Table</button>&nbsp;
             <button data-perspective="columns" class="btn change-persective">Columns</button>&nbsp;
@@ -85,9 +104,6 @@
 		  <% _.each(views, function(view) { %> 
 		  	<li><a class="data-view-selector" data-view-id="<%= view.id %>" data-fields="<%= view.fields %>" href="#"><%= view.title %></a></li> 
 		  <% }); %>
-                  <li>
-                    <a class="playground data-view-selector" data-view-id="playground" data-fields="" href="#">Playground</a>
-                  </li>
                   <li class="dropdown menu-marker">
                     <a class="dropdown-toggle" href="#">More</a>
                     <ul class="dropdown-menu">
@@ -125,9 +141,7 @@
   	
   </script>
   
-  
-  <script type="text/javascript">
-  	
+  <script type="text/javascript">  	
   	google.load("visualization", "1", {packages:["corechart"]});
   	
   	//singletons
@@ -135,10 +149,26 @@
   	window.dataSnapshotView = new DataSnaphotsView;
   	window.currentDataset = null;
   	window.currentPerspective = "table";
+        window.playgroundSelectedFields = [];
   	
-  	$(document).ready(function(){
-  		
-  	
+  	$(document).ready(function(){                
+                $("input#field-search-qry").keyup(function(e){
+                    e.stopPropagation();
+                    var val = $(this).val();
+                    if (!val){
+                        $('.playground-field-container').show();
+                    } else {
+                        $('.playground-field-container a').each(function(){
+                            if ($(this).text().toLowerCase().indexOf(val.toLowerCase()) == -1){
+                                $(this).hide();
+                            } else {
+                                $(this).show();
+                            };
+                        });
+                    };
+                    
+                });
+                  	
   		//show a different perspective for the dataset
   		function changePerspective(perspective){
   			window.currentPerspective = perspective;
@@ -197,6 +227,7 @@
   	
   		//keep track of what data view is selected
   		window.dataSnapshotView.bind("selected-view-changed", function(){
+                        $('.custom-fields-container').hide();
                         if (!this.selectedView) return;
                         $('#view_header').text(this.selectedView.get('title'));
   			console.log(this.selectedView.get("fields"));
@@ -287,11 +318,30 @@
                     $(this).toggleClass('open');
                     e.stopPropagation();
                 });
+
   		window.dataSnapshotView.selectDefaultView();
+
                 $(document).click(function(){
                     $('.menu-marker').removeClass('open');
                 });
   		
+                $('a[data-view-id="Playground"]').click(function(e){
+                    e.stopPropagation();
+                    $('.custom-fields-container').show();
+                    window.query.setFields(window.playgroundSelectedFields);
+                });
+
+                $('.playground-field-container a').click(function(e){
+                    $(this).parent().toggleClass('selected');
+                    if ($(this).parent().hasClass('selected')){
+                        window.playgroundSelectedFields.push($(this).attr('data-code'));
+                    } else {
+                        var idx = window.playgroundSelectedFields.indexOf($(this).attr('data-code'));
+                        if(idx!=-1) window.playgroundSelectedFields.splice(idx, 1);
+                    };
+                    window.query.setFields(window.playgroundSelectedFields);
+                    return false;                    
+                });
   	});
   	
   </script>
