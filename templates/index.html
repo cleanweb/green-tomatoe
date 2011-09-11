@@ -120,10 +120,12 @@
   	window.currentPerspective = "table";
   	
   	$(document).ready(function(){
-  		window.query.addField("population");
+  		
   	
   		//show a different perspective for the dataset
   		function changePerspective(perspective){
+  			window.currentPerspective = perspective;
+  			
   			$("#data-views").children().hide();
   			
   			if(perspective == "table"){
@@ -155,11 +157,6 @@
   		    m.fetch({
 	  			success : function(model, response){
 	  				window.currentDataset = response;
-	  				
-	  				/*model.set(response);	
-	  				var tv = new TableView({model : model});
-	  				$("#table-wrapper").html(tv.render());
-	  				*/
 	  				changePerspective(window.currentPerspective);
 	  				
 	  			},
