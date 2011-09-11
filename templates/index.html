@@ -16,6 +16,7 @@
                 .span5.columns{width: 190px;}
                 ul.tabs {height:36px;}
                 .dropdown-menu li.active a{background:#BFBFBF;color:black;}
+
 	</style>
 	
 	<script type="text/javascript" src="/static/js/jquery.js"></script>
@@ -70,11 +71,17 @@
  		<div id="data-views">
  			<div id="table-wrapper"></div>	
  			<div id="columns-wrapper"></div>
+ 			<div id="lines-wrapper"></div>
  		</div>
  		
     </div>
   </div>
   
+  <!--
+  <div class="loader" style="border:solid 1px #CCCCCC; position:absolute; z-index:1000; left:20px; top:150px; min-width:200px; min-height:200px; background-color:#FFFFFF;">
+  	xx
+  </div>
+  -->
   
   <script type="text/template" id="template-data-views">
   	<ul class="tabs">
@@ -136,7 +143,7 @@
   		function changePerspective(perspective){
   			window.currentPerspective = perspective;
   			
-  			$("#data-views").children().hide();
+  			$("#data-views").children().html("").hide();
   			
   			if(perspective == "table"){
   				var m = new Dataset
@@ -147,15 +154,23 @@
   			}
   			
   			if(perspective == "columns"){
-  				$("#" + perspective + "-wrapper").html("").show();
   				barChart(window.currentDataset, perspective + "-wrapper");
+  				$("#" + perspective + "-wrapper").show();
   			}
+  			
+  			if(perspective == "lines"){
+  				lineChart(window.currentDataset, perspective + "-wrapper");
+  				$("#" + perspective + "-wrapper").show();
+  			}
+  			
   		}
   	
   		//fetch new data when filters change
   		function updateQuery() {
   			console.log("query changed");
   			console.log(this);
+  			
+  			$("#dataviews").addClass("loader");
   			
   			if(!window.query.isComplete()){
   				$("#table-wrapper").html("<h3>No data to display</h3>");
@@ -166,6 +181,8 @@
   			m.set({query : window.query.toString() });
   		    m.fetch({
 	  			success : function(model, response){
+	  				$("#dataviews").removeClass("loader");
+	  				
 	  				window.currentDataset = response;
 	  				changePerspective(window.currentPerspective);
 	  				
