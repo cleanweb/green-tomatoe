@@ -280,10 +280,14 @@
   			changePerspective(perspective);
   		});
   		
-                $('.menu-marker').click(function(){
+                $('.menu-marker').click(function(e){
                     $(this).toggleClass('open');
+                    e.stopPropagation();
                 });
   		window.dataSnapshotView.selectDefaultView();
+                $(document).click(function(){
+                    $('.menu-marker').removeClass('open');
+                });
   		
   	});
   	
