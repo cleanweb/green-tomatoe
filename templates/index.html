@@ -5,6 +5,7 @@
 		body{
 			margin: auto auto;
 			width:940px;
+			overflow: hidden;
 		} 
                 ul.pills li{width:180px;}
                 ul.pills li a {margin:2px 1px;}
@@ -37,18 +38,18 @@
 	<script type="text/javascript" src="/static/js/charts.js"></script>
 </head>
 <body>
-  
+  <!--
   <div class="topbar">
       <div class="topbar-inner">
         <div class="container">
-          <h3><a href="#">Tomatoe</a></h3>
+          <h3><a id="tomatoe-logo" href="#">Tomatoe</a></h3>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
           </ul>
         </div>
-      </div><!-- /topbar-inner -->
+      </div>
     </div>
-  
+  -->
   <div class="row show-grid" style="margin-top: 50px;">
     <div class="span5 columns">
     	<ul class="pills">
@@ -66,6 +67,7 @@
     </div>
     <div id="content" class="span11 columns">
         <div id="content_nav"></div>
+
         <h2 id="view_header"></h2>    	
         <div class="custom-fields-container well" style="display:none;">
             <div class="field-search-query-container">                
@@ -80,16 +82,21 @@
             </ul>
         </div>
         <div id="switch_view_container" class="well" style="padding: 14px 19px;">
-            <button data-perspective="table" class="btn change-persective">Table</button>&nbsp;
-            <button data-perspective="columns" class="btn change-persective">Columns</button>&nbsp;
-            <button data-perspective="pie" class="btn change-persective">Pie</button>&nbsp;
-            <button data-perspective="lines" class="btn change-persective">Lines</button>
+			<button data-perspective="table" class="btn change-persective">Table</button>&nbsp;
+			<button data-perspective="columns" class="btn change-persective">Columns</button>&nbsp;
+			<button data-perspective="pie" class="btn change-persective">Pie</button>&nbsp;
+			<button data-perspective="lines" class="btn change-persective">Lines</button>&nbsp;	
+			<button data-perspective="area" class="btn change-persective">Area</button>&nbsp;
+			<button data-perspective="map" class="btn change-persective">Map</button>
         </div>    
         <div id="data-views">
-            <div id="table-wrapper"></div>	
-            <div id="columns-wrapper"></div>
-            <div id="lines-wrapper"></div>
-        </div> 		
+ 			<div id="table-wrapper"></div>	
+ 			<div id="columns-wrapper"></div>
+ 			<div id="lines-wrapper"></div>
+ 			<div id="area-wrapper"></div>
+ 			<div id="pie-wrapper"></div>
+ 			<div id="map-wrapper"></div>
+ 		</div>
     </div>
   </div>
   
@@ -141,8 +148,20 @@
   	
   </script>
   
-  <script type="text/javascript">  	
-  	google.load("visualization", "1", {packages:["corechart"]});
+
+  <script type="text/template" id="template-column-selector">
+  	
+  	<select name="stackedSelect">
+         <% _.each(columns, function(column) { %> 
+		  	<option><%= column.title %></option> 
+		  <% }); %>           
+    </select>
+  		
+  </script>
+  
+  <script type="text/javascript">
+  	
+  	google.load("visualization", "1", {packages:["corechart",'geomap']});
   	
   	//singletons
   	window.query = new Query;
@@ -180,20 +199,30 @@
   				m.set(window.currentDataset);
   				var tv = new TableView({model : m});
 	  			$("#" + perspective + "-wrapper").html(tv.render());
-	  			$("#" + perspective + "-wrapper").show();		
+	  			
   			}
   			
   			if(perspective == "columns"){
   				barChart(window.currentDataset, perspective + "-wrapper");
-  				$("#" + perspective + "-wrapper").show();
-  				
   			}
   			
   			if(perspective == "lines"){
   				lineChart(window.currentDataset, perspective + "-wrapper");
-  				$("#" + perspective + "-wrapper").show();
   			}
   			
+  			if(perspective == "area"){
+  				areaChart(window.currentDataset, perspective + "-wrapper");
+  			}
+  			
+  			if(perspective == "pie"){
+  				pieChart(window.currentDataset, perspective + "-wrapper");
+  			}
+  			
+  			if(perspective == "map"){
+  				mapChart(window.currentDataset, perspective + "-wrapper");
+  			}
+  			
+  			$("#" + perspective + "-wrapper").show();
   		}
   	
   		//fetch new data when filters change
@@ -233,6 +262,9 @@
   			console.log(this.selectedView.get("fields"));
   			
   			window.query.setFields(this.selectedView.get("fields"));
+  		
+  			var title = this.selectedView.get("title");
+  			$("#data-view-title").html(title);
   		
   		}, window.dataSnapshotView);
   	
