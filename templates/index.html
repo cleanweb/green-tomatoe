@@ -120,8 +120,29 @@
   	window.currentPerspective = "table";
   	
   	$(document).ready(function(){
-  		window.query.addField("population");
+  		
   	
+  		//show a different perspective for the dataset
+  		function changePerspective(perspective){
+  			window.currentPerspective = perspective;
+  			
+  			$("#data-views").children().hide();
+  			
+  			if(perspective == "table"){
+  				var m = new Dataset
+  				m.set(window.currentDataset);
+  				var tv = new TableView({model : m});
+	  			$("#" + perspective + "-wrapper").html(tv.render());
+	  			$("#" + perspective + "-wrapper").show();		
+  			}
+  			
+  			if(perspective == "columns"){
+  				$("#" + perspective + "-wrapper").html("").show();
+  				barChart(window.currentDataset, perspective + "-wrapper");
+  			}
+  		}
+  	
+  		//fetch new data when filters change
   		function updateQuery() {
   			console.log("query changed");
   			console.log(this);
@@ -136,10 +157,7 @@
   		    m.fetch({
 	  			success : function(model, response){
 	  				window.currentDataset = response;
-	  				
-	  				model.set(response);	
-	  				var tv = new TableView({model : model});
-	  				$("#table-wrapper").html(tv.render());
+	  				changePerspective(window.currentPerspective);
 	  				
 	  			},
 	  			error : function(model, response){
@@ -159,7 +177,7 @@
   	
   		//monitor changes to the query object
   		window.query.bind('states-changed', function(){
-  			updateQuery();
+ 		    updateQuery();
   		}, window.query);
   	
   		window.query.bind('fields-changed', function(){
@@ -232,22 +250,7 @@
   		$(".change-persective").click(function(){
   			var btn = $(this);
   			var perspective = btn.attr("data-perspective"); 
-  			
-  			$("#data-views").children().hide();
-  			
-  			if(perspective == "table"){
-  				var m = new Dataset
-  				m.set(window.currentDataset);
-  				var tv = new TableView({model : m});
-	  			$("#" + perspective + "-wrapper").html(tv.render());
-	  			$("#" + perspective + "-wrapper").show();		
-  			}
-  			
-  			if(perspective == "columns"){
-  				$("#" + perspective + "-wrapper").html("").show();
-  				barChart(window.currentDataset, perspective + "-wrapper");
-  			}
-  			
+  			changePerspective(perspective);
   		});
   		
   		window.dataSnapshotView.selectDefaultView();
