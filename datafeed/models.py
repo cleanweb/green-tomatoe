@@ -52,5 +52,6 @@ def _column_fixture():
 
 _column_fixture()
 
+# Dummy cache variables (SERVER RESTART REQUIRED)
 CODE2STATE_MAP = dict((x.code, x) for x in State.objects.all())
 CODE2COLUMN_MAP = dict((x.code, x) for x in Column.objects.all())
