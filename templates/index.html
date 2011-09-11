@@ -90,6 +90,7 @@
 			<button data-perspective="lines" class="btn change-persective">Lines</button>&nbsp;	
 			<button data-perspective="area" class="btn change-persective">Area</button>&nbsp;
 			<button data-perspective="map" class="btn change-persective">Map</button>
+                        <a href="#" style="float:right;" target="_blank" class="btn" id="get_data_link">Data</a>
         </div>    
         <div id="data-views">
  			<div id="table-wrapper"></div>	
@@ -172,8 +173,13 @@
   	window.currentPerspective = "table";
         window.playgroundSelectedFields = [];
         window.CHART_loaded = function(){alert('hello!');};
+
   	
   	$(document).ready(function(){                
+                $('#get_data_link').click(function(){
+                    $(this).attr('href', '{% url datafeed_columns %}?' + window.query.toString());
+                });
+
                 $("input#field-search-qry").keyup(function(e){
                     e.stopPropagation();
                     var val = $(this).val();
