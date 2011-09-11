@@ -18,7 +18,7 @@ for state in range(56):
 			l = f.readline()
 			#print l
 			m = re.search('(?<=>)[^<]+', l)
-			res = res + "\t" + m.group(0)
+			res = res + "\t" + m.group(0).replace("%","").replace("$","")
 		else:
 			l = f.readline()
 

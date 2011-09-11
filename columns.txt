@@ -52,14 +52,14 @@ Personspersquaremile	Persons per square mile
 FIPSCode	FIPS Code  
 TotalEnergy	Total Energy
 Coal	Coal
-NaturalGas		Natural Gas 	
+NaturalGas	Natural Gas 	
 Petroleum	Petroleum
 TotalFossilFuel	Total Fossil Fuel
-NuclearElectricPower		Nuclear Electric Power 	
+NuclearElectricPower	Nuclear Electric Power 	
 RenewableEnergy	Renewable Energy
 NetInterstateFlow	Net Interstate Flow of Electricity/Losses
-NetElectricityImports		Net Electricity Imports  	
-EndUseResidential		End-Use Residential 	
-EndUseCommercial		End-Use Commercial 	
-EndUseIndustrial		End-Use Industrial 	
+NetElectricityImports	Net Electricity Imports  	
+EndUseResidential	End-Use Residential 	
+EndUseCommercial	End-Use Commercial 	
+EndUseIndustrial	End-Use Industrial 	
 EndUseTransportation	End-Use Transportation
