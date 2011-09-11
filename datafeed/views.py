@@ -41,7 +41,7 @@ class SpitColumns(http.RESTBase):
                               if x.strip() in df_models.CODE2COLUMN_MAP]
                 
         resp = {}
-        resp['columns'] = []
+        resp['columns'] = [{'title': 'State', 'desc':'State'}]
         for column_code in valid_data_columns:
             column = df_models.CODE2COLUMN_MAP[column_code]
             resp['columns'].append({'title': column.name,
