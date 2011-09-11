@@ -138,7 +138,7 @@ var DataSnaphotsView = Backbone.View.extend({
   	DataSnaphots.bind('reset', this.addAll, this);
   	
   	DataSnaphots.reset([
-  		{fields: ["field1","field2"], title: "View1", id: "view1"},
+  		{fields: ["Accommodationandfoodservicessales","Asianpersonspercent"], title: "View1", id: "view1"},
   		{fields: ["field1","field2"], title: "View2", id: "view2"},
   		{fields: ["field1","field2"], title: "View3", id: "view3"}
   	]);	
