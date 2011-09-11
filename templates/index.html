@@ -14,6 +14,7 @@
                     box-shadow:inset 0 0 3px #001050;
                 }
                 .span5.columns{width: 190px;}
+                ul.tabs {height:36px; overflow:hidden;}
 	</style>
 	
 	<script type="text/javascript" src="/static/js/jquery.js"></script>
@@ -119,8 +120,29 @@
   	window.currentPerspective = "table";
   	
   	$(document).ready(function(){
-  		window.query.addField("population");
+  		
   	
+  		//show a different perspective for the dataset
+  		function changePerspective(perspective){
+  			window.currentPerspective = perspective;
+  			
+  			$("#data-views").children().hide();
+  			
+  			if(perspective == "table"){
+  				var m = new Dataset
+  				m.set(window.currentDataset);
+  				var tv = new TableView({model : m});
+	  			$("#" + perspective + "-wrapper").html(tv.render());
+	  			$("#" + perspective + "-wrapper").show();		
+  			}
+  			
+  			if(perspective == "columns"){
+  				$("#" + perspective + "-wrapper").html("").show();
+  				barChart(window.currentDataset, perspective + "-wrapper");
+  			}
+  		}
+  	
+  		//fetch new data when filters change
   		function updateQuery() {
   			console.log("query changed");
   			console.log(this);
@@ -135,10 +157,7 @@
   		    m.fetch({
 	  			success : function(model, response){
 	  				window.currentDataset = response;
-	  				
-	  				model.set(response);	
-	  				var tv = new TableView({model : model});
-	  				$("#table-wrapper").html(tv.render());
+	  				changePerspective(window.currentPerspective);
 	  				
 	  			},
 	  			error : function(model, response){
@@ -158,7 +177,7 @@
   	
   		//monitor changes to the query object
   		window.query.bind('states-changed', function(){
-  			updateQuery();
+ 		    updateQuery();
   		}, window.query);
   	
   		window.query.bind('fields-changed', function(){
@@ -189,6 +208,8 @@
   			
   			var code = $(this).attr("data-state");
   			window.query.removeState(code);
+                        $(".allstates-selector-add").show().parent().removeClass('selected');
+                        $(".allstates-selector-remove").hide().parent().removeClass('selected'); 
   		});
   		
   		//** add all states
@@ -201,7 +222,7 @@
                         $(this).parent().toggleClass('selected'); 
   			$(this).parent().siblings().each(function(){
   				states.push($(this).attr("data-state"));
-                  				
+                                $(this).addClass('selected');                  		
   				$(this).children(".state-selector-remove").show();
   				$(this).children(".state-selector-add").hide();
   			});
@@ -217,6 +238,7 @@
   			$(this).parent().toggleClass('selected');
                         
   			$(this).parent().siblings().each(function(){
+                                $(this).removeClass('selected');
   				$(this).children(".state-selector-add").show();
   				$(this).children(".state-selector-remove").hide();
   			});
@@ -228,29 +250,12 @@
   		$(".change-persective").click(function(){
   			var btn = $(this);
   			var perspective = btn.attr("data-perspective"); 
-  			
-  			$("#data-views").children().hide();
-  			
-  			if(perspective == "table"){
-  				var m = new Dataset
-  				m.set(window.currentDataset);
-  				var tv = new TableView({model : m});
-	  			$("#" + perspective + "-wrapper").html(tv.render());
-	  			$("#" + perspective + "-wrapper").show();		
-  			}
-  			
-  			if(perspective == "columns"){
-  				$("#" + perspective + "-wrapper").html("").show();
-  				barChart(window.currentDataset, perspective + "-wrapper");
-  			}
-  			
+  			changePerspective(perspective);
   		});
   		
   		window.dataSnapshotView.selectDefaultView();
   		
   	});
-        
-        window.dataSnapshotView.addView({fields: ["Accommodationandfoodservicessales","Asianpersonspercent"], title: "Custom View", id: "custom_view"});
   	
   </script>
   
