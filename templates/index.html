@@ -47,8 +47,18 @@
     </div>
     <div id="content" class="span11 columns">
     	
- 		<div id="table-wrapper">
- 			
+    	<h2>Asian population VS food sales</h2>
+    	
+    	<div class="well" style="padding: 14px 19px;">
+        	<button data-perspective="table" class="btn change-persective">Table</button>&nbsp;
+        	<button data-perspective="columns" class="btn change-persective">Columns</button>&nbsp;
+        	<button data-perspective="pie" class="btn change-persective">Pie</button>&nbsp;
+      		<button data-perspective="lines" class="btn change-persective">Lines</button>
+      	</div>
+    	
+ 		<div id="data-views">
+ 			<div id="table-wrapper"></div>	
+ 			<div id="columns-wrapper"></div>
  		</div>
  		
     </div>
@@ -96,7 +106,8 @@
   	//singletons
   	window.query = new Query;
   	window.dataSnapshotView = new DataSnaphotsView;
-  	
+  	window.currentDataset = null;
+  	window.currentPerspective = "table";
   	
   	$(document).ready(function(){
   		window.query.addField("population");
@@ -114,6 +125,8 @@
   			m.set({query : window.query.toString() });
   		    m.fetch({
 	  			success : function(model, response){
+	  				window.currentDataset = response;
+	  				
 	  				model.set(response);	
 	  				var tv = new TableView({model : model});
 	  				$("#table-wrapper").html(tv.render());
@@ -197,6 +210,28 @@
   			});
   			
   			window.query.setStates([]);
+  		});
+  		
+  		//** change data perspective
+  		$(".change-persective").click(function(){
+  			var btn = $(this);
+  			var perspective = btn.attr("data-perspective"); 
+  			
+  			$("#data-views").children().hide();
+  			
+  			if(perspective == "table"){
+  				var m = new Dataset
+  				m.set(window.currentDataset);
+  				var tv = new TableView({model : m});
+	  			$("#" + perspective + "-wrapper").html(tv.render());
+	  			$("#" + perspective + "-wrapper").show();		
+  			}
+  			
+  			if(perspective == "columns"){
+  				$("#" + perspective + "-wrapper").html("").show();
+  				barChart(window.currentDataset, perspective + "-wrapper");
+  			}
+  			
   		});
   		
   		window.dataSnapshotView.selectDefaultView();
