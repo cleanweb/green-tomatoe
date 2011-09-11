@@ -134,14 +134,20 @@ var TableView = Backbone.View.extend({
 
 var DataSnaphotsView = Backbone.View.extend({
   initialize : function(){
+        this.activeViews = [
+  		{fields: ["Accommodationandfoodservicessales","Asianpersonspercent"], title: "View1", id: "view1"},
+  		{fields: ["field1","field2"], title: "View2", id: "view2"},
+  		{fields: ["field1","field2"], title: "View3", id: "view3"}];
+
+        this.addView = function(view_object){
+            this.activeViews.push(view_object);
+            DataSnaphots.reset(this.activeViews);
+        },
+
   	DataSnaphots.bind('add',this.addOne, this);
   	DataSnaphots.bind('reset', this.addAll, this);
   	
-  	DataSnaphots.reset([
-  		{fields: ["Accommodationandfoodservicessales","Asianpersonspercent"], title: "View1", id: "view1"},
-  		{fields: ["field1","field2"], title: "View2", id: "view2"},
-  		{fields: ["field1","field2"], title: "View3", id: "view3"}
-  	]);	
+  	DataSnaphots.reset(this.activeViews);
   },	
 
   addOne : function(){
@@ -157,7 +163,7 @@ var DataSnaphotsView = Backbone.View.extend({
   },
 
   render: function() {
-  	$("#content").prepend(_.template($("#template-data-views").html())({views : DataSnaphots.toJSON()}));
+  	$("#content_nav").html(_.template($("#template-data-views").html())({views : DataSnaphots.toJSON()}));
   	
   	$(".data-view-selector").click(_.bind(function(e){	
   		$(e.target).parent().parent().children(".active").removeClass("active");
