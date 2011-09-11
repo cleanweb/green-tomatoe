@@ -138,7 +138,7 @@ var DataSnaphotsView = Backbone.View.extend({
  this.activeViews = [
         { id:"People",
           title:"People",
-          fields: ["Population","Populationpercentchange","Population in 2000","Personsunderyearsoldpercent",
+          fields: ["Population","Populationpercentchange","Population in 2000",
                    "Personsunderyearsoldpercent","Personsyearsoldandoverpercent","Femalepersonspercent"]},
         { id:"Demographics", 
           title:"Demographics",
@@ -158,7 +158,7 @@ var DataSnaphotsView = Backbone.View.extend({
           fields: ["Households","Personsperhousehold","Percapitamoneyincomeinpastmonthsdollars","Medianhouseholdincome","Personsbelowpovertylevelpercent"]},
         { id:"Playground",
           title:"Playground", 
-          fields: []}];
+          fields: ["Households","Personsperhousehold","Percapitamoneyincomeinpastmonthsdollars","Medianhouseholdincome","Personsbelowpovertylevelpercent"]}];
 
     this.additionalViews = [
         { id:"Business",
