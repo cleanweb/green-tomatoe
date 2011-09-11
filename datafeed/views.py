@@ -1,3 +1,4 @@
+import math
 from django.conf import settings
 from django.db import models as base_models
 from django.http import HttpResponseRedirect, HttpResponse
@@ -47,8 +48,12 @@ class SpitColumns(http.RESTBase):
             resp['columns'].append({'title': column.name,
                                     'desc': column.description})
         
-
-        raw_data = df_models.StateData.objects.filter(state__in = valid_state_object)
+        raw_data = []
+        IN_LIMIT = 30
+        for i in range(0, math.ceil(len(valid_state_object)/IN_LIMIT)):
+            in_st = valid_state_object[i*IN_LIMIT:i*IN_LIMIT + IN_LIMIT]
+            if not in_st: break
+            raw_data.extend(df_models.StateData.objects.filter(state__in=in_st))
 
         resp['data'] = []
         for row in raw_data:
