@@ -49,7 +49,11 @@ Buildingpermits	Building permits
 Federalspending	Federal spending
 Landarea	Land area
 Personspersquaremile	Persons per square mile
-FIPSCode	FIPS Code  
+FIPSCode	FIPS Code
+ObesityRates	Obesity Rates (percent)
+LivingWithHIV	Living with a diagnosis of HIV infection
+LivingWithAIDS	Living with an AIDS diagnosis
+AIDSDiagnoses	AIDS diagnoses per 100,000 population
 TotalEnergy	Total Energy
 Coal	Coal
 NaturalGas	Natural Gas 	
