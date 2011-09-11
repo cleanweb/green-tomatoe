@@ -54,6 +54,7 @@
       	</ul>
     </div>
     <div id="content" class="span11 columns">
+        <div id="content_nav"></div>
     	
  		<div id="table-wrapper">
  			
@@ -213,6 +214,8 @@
   		window.dataSnapshotView.selectDefaultView();
   		
   	});
+        
+        window.dataSnapshotView.addView({fields: ["Accommodationandfoodservicessales","Asianpersonspercent"], title: "Custom View", id: "custom_view"});
   	
   </script>
   
