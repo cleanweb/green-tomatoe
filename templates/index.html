@@ -137,7 +137,7 @@
   		function changePerspective(perspective){
   			window.currentPerspective = perspective;
   			
-  			$("#data-views").children().hide();
+  			$("#data-views").children().html("").hide();
   			
   			if(perspective == "table"){
   				var m = new Dataset
@@ -148,13 +148,13 @@
   			}
   			
   			if(perspective == "columns"){
-  				$("#" + perspective + "-wrapper").html("").show();
   				barChart(window.currentDataset, perspective + "-wrapper");
+  				$("#" + perspective + "-wrapper").show();
   			}
   			
   			if(perspective == "lines"){
-  				$("#" + perspective + "-wrapper").html("").show();
   				lineChart(window.currentDataset, perspective + "-wrapper");
+  				$("#" + perspective + "-wrapper").show();
   			}
   			
   		}
