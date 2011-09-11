@@ -14,6 +14,7 @@
                     box-shadow:inset 0 0 3px #001050;
                 }
                 .span5.columns{width: 190px;}
+                .span11.columns{width:690px;}
                 ul.tabs {height:36px;}
                 .dropdown-menu li.active a{background:#BFBFBF;color:black;}
 
@@ -58,22 +59,18 @@
     </div>
     <div id="content" class="span11 columns">
         <div id="content_nav"></div>
-    	
-    	<h2>Asian population VS food sales</h2>
-    	
-    	<div class="well" style="padding: 14px 19px;">
-        	<button data-perspective="table" class="btn change-persective">Table</button>&nbsp;
-        	<button data-perspective="columns" class="btn change-persective">Columns</button>&nbsp;
-        	<button data-perspective="pie" class="btn change-persective">Pie</button>&nbsp;
-      		<button data-perspective="lines" class="btn change-persective">Lines</button>
-      	</div>
-    	
- 		<div id="data-views">
- 			<div id="table-wrapper"></div>	
- 			<div id="columns-wrapper"></div>
- 			<div id="lines-wrapper"></div>
- 		</div>
- 		
+        <h2 id="view_header"></h2>    	
+        <div id="switch_view_container" class="well" style="padding: 14px 19px;">
+            <button data-perspective="table" class="btn change-persective">Table</button>&nbsp;
+            <button data-perspective="columns" class="btn change-persective">Columns</button>&nbsp;
+            <button data-perspective="pie" class="btn change-persective">Pie</button>&nbsp;
+            <button data-perspective="lines" class="btn change-persective">Lines</button>
+        </div>    
+        <div id="data-views">
+            <div id="table-wrapper"></div>	
+            <div id="columns-wrapper"></div>
+            <div id="lines-wrapper"></div>
+        </div> 		
     </div>
   </div>
   
@@ -88,6 +85,9 @@
 		  <% _.each(views, function(view) { %> 
 		  	<li><a class="data-view-selector" data-view-id="<%= view.id %>" data-fields="<%= view.fields %>" href="#"><%= view.title %></a></li> 
 		  <% }); %>
+                  <li>
+                    <a class="playground data-view-selector" data-view-id="playground" data-fields="" href="#">Playground</a>
+                  </li>
                   <li class="dropdown menu-marker">
                     <a class="dropdown-toggle" href="#">More</a>
                     <ul class="dropdown-menu">
@@ -112,7 +112,7 @@
       </thead>
           
       <tbody>
-        <% _.each(data, function(row) { %> 
+           <% _.each(data, function(row) { %> 
 		  	<tr>
 		  	  <% _.each(row, function(col) { %>
 		      	 <td><%= col %></td>
@@ -197,6 +197,8 @@
   	
   		//keep track of what data view is selected
   		window.dataSnapshotView.bind("selected-view-changed", function(){
+                        if (!this.selectedView) return;
+                        $('#view_header').text(this.selectedView.get('title'));
   			console.log(this.selectedView.get("fields"));
   			
   			window.query.setFields(this.selectedView.get("fields"));
