@@ -31,23 +31,20 @@
   <div class="row show-grid" style="margin-top: 50px;">
     <div class="span5 columns">
     	<ul>
-    		<li>All states <a href="#">++</a></li>	
-	      	
+    		<li>All states 
+	      			<a class="allstates-selector-add" data-state="ALL" href="#">+</a>
+	      			<a class="allstates-selector-remove" style="display:none;" data-state="ALL" href="#">-</a>
+	      		</li>
 	      	{% for state in states %}
-	      		<li>{{state}} <a href="#">+</a></li>
+	      		<li data-state="{{state.code}}">{{state.name}} 
+	      			<a class="state-selector-add" data-state="{{state.code}}" href="#">+</a>
+	      			<a class="state-selector-remove" style="display:none;" data-state="{{state.code}}" href="#">-</a>
+	      		</li>
 	      	{% endfor %}
       	</ul>
     </div>
-    <div class="span11 columns">
-    	<ul class="tabs">
-		  <li class="active"><a href="#">Overview</a></li>
-		  <li><a href="#">Energy consumption</a></li>
-		  <li><a href="#">Energy sources</a></li>
-		  <li><a href="#">Water</a></li>
-		  <li><a href="#">Trash</a></li>
-		  <li><a href="#">+</a></li>
- 		</ul>
- 		
+    <div id="content" class="span11 columns">
+    	
  		<div id="table-wrapper">
  			
  		</div>
@@ -55,6 +52,14 @@
     </div>
   </div>
   
+  
+  <script type="text/template" id="template-data-views">
+  	<ul class="tabs">
+		  <% _.each(views, function(view) { %> 
+		  	<li><a class="data-view-selector" data-view-id="<%= view.id %>" data-fields="<%= view.fields %>" href="#"><%= view.title %></a></li> 
+		  <% }); %>
+ 	</ul>
+  </script>
   
   <script type="text/template" id="template-table">
   	
@@ -84,26 +89,115 @@
   
   <script type="text/javascript">
   	
+  	//singletons
+  	window.query = new Query;
+  	window.dataSnapshotView = new DataSnaphotsView;
+  	
+  	
   	$(document).ready(function(){
+  		window.query.addField("population");
   	
-  		var query = new Query;
-  		query.addState("AL");
-  		query.addField("field1");
-  	
-  		var m = new Dataset;
-  		m.set({query : query.toString() });
-  		m.fetch({
-  			success : function(model, response){
-  				console.log(response);
-  			},
-  			error : function(model, response){
-  				console.log(response);
+  		function updateQuery() {
+  			console.log("query changed");
+  			console.log(this);
+  			
+  			if(!window.query.isComplete()){
+  				$("#table-wrapper").html("<h3>No data to display</h3>");
+  				return;
   			}
-  		});
+  			
+  			var m = new Dataset;
+  			m.set({query : window.query.toString() });
+  		    m.fetch({
+	  			success : function(model, response){
+	  				model.set(response);	
+	  				var tv = new TableView({model : model});
+	  				$("#table-wrapper").html(tv.render());
+	  				
+	  			},
+	  			error : function(model, response){
+	  				console.log(response);
+	  			}
+  			});
+  			
+  		}
   	
-  		var tv = new TableView({model : m});
-  		$("#table-wrapper").html(tv.render());
-  	})
+  		//keep track of what data view is selected
+  		window.dataSnapshotView.bind("selected-view-changed", function(){
+  			console.log(this.selectedView.get("fields"));
+  			
+  			window.query.setFields(this.selectedView.get("fields"));
+  		
+  		}, window.dataSnapshotView);
+  	
+  		//monitor changes to the query object
+  		window.query.bind('states-changed', function(){
+  			updateQuery();
+  		}, window.query);
+  	
+  		window.query.bind('fields-changed', function(){
+  			updateQuery();
+  		}, window.query);
+  	
+  		//** add state to the query 
+  		$(".state-selector-add").click(function(){
+  			
+  			$(this).hide();
+  			$(this).parent().children(".state-selector-remove").show();
+  			$(".allstates-selector-add").show();
+  			$(".allstates-selector-remove").hide();
+  			
+  			var code = $(this).attr("data-state");
+  			window.query.addState(code);
+  		});
+  		
+  		//** remove state from the query
+  		$(".state-selector-remove").click(function(){
+  			
+  			$(this).hide();
+  			$(this).parent().children(".state-selector-add").show();
+  			$(".allstates-selector-add").show();
+  			$(".allstates-selector-remove").hide();
+  			
+  			var code = $(this).attr("data-state");
+  			window.query.removeState(code);
+  		});
+  		
+  		//** add all states
+  		$(".allstates-selector-add").click(function(){
+  			
+  			var states = [];
+  			
+  			$(this).hide();
+  			$(this).parent().children(".allstates-selector-remove").show();
+  			
+  			$(this).parent().siblings().each(function(){
+  				states.push($(this).attr("data-state"));
+  				
+  				$(this).children(".state-selector-remove").show();
+  				$(this).children(".state-selector-add").hide();
+  			});
+  			
+  			window.query.setStates(states);
+  		});
+  		
+  		//** remove all states
+  		$(".allstates-selector-remove").click(function(){
+  			
+  			$(this).hide();
+  			$(this).parent().children(".allstates-selector-add").show();
+  			
+  			$(this).parent().siblings().each(function(){
+  				$(this).children(".state-selector-add").show();
+  				$(this).children(".state-selector-remove").hide();
+  			});
+  			
+  			window.query.setStates([]);
+  		});
+  		
+  		window.dataSnapshotView.selectDefaultView();
+  		
+  	});
   	
   </script>
   

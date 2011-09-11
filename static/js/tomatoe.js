@@ -8,6 +8,11 @@ var Query = Backbone.Model.extend({
 	 * 		fields : []
 	 * }
 	*/
+
+	reset : function(){
+		this.set("states",[]);
+		this.set("fields",[]);
+	},
 	
 	addState : function(state){
 		var currentStates = this.get("states");
@@ -15,6 +20,12 @@ var Query = Backbone.Model.extend({
 		
 		currentStates.push(state);
 		this.set({states : currentStates});
+		this.trigger("states-changed");
+	},
+	
+	setStates : function(states){
+		this.set({states : states});
+		this.trigger("states-changed");
 	},
 	
 	removeState : function(state){
@@ -23,6 +34,7 @@ var Query = Backbone.Model.extend({
 		
 		currentStates = _.reject(currentStates, function(s){ return s == state; }); 
 		this.set({states : currentStates});
+		this.trigger("states-changed");
 	},
 	
 	addField : function(field){
@@ -31,14 +43,23 @@ var Query = Backbone.Model.extend({
 		
 		currentFields.push(field);
 		this.set({fields : currentFields});
+		this.trigger("fields-changed");
+	},
+	
+	setFields : function(fields){
+		this.set({fields : fields});
+		this.trigger("fields-changed");
 	},
 	
 	removeField : function(field){
 		var currentFields = this.get("fields");
 		if(undefined == currentFields) currentFields = [];
 		
+		
+		
 		currentFields = _.reject(currentFields, function(s){ return s == field; }); 
 		this.set({fields : currentFields});
+		this.trigger("fields-changed");
 	},
 	
 	toString : function(){
@@ -83,34 +104,68 @@ var Dataset = Backbone.Model.extend({
 		  * 
 		  */
  		  url : function(){
- 		  	return "/data?" + this.get("query");
+ 		  	return "/datafeed?" + this.get("query");
  		  }	
-	},
-	{
-		
 	}
-
 );
 
-var fixture = new Dataset;
-fixture.set(
-	{ 
-		
-		query : "states=al,ca,wi&fields=f1,f2,f3",
-		
-		columns : [ {title:"Col1", desc:"column 1"}, 
-					{title:"Col2", desc:"column 2"}, 
-					{title:"Col3", desc:"column 1"} ],
-					
-		data : [ [1,2,3], [4,5,6], [7,8,9] ] 
-	}
-	
-);
+var DataSnapshot = Backbone.Model.extend({
+		/*
+		 *  {
+		 * 	  title : "", 
+		 * 	  fields : ["field1", "field2", "field2"]
+		 *  }
+		*/
+});
+
+var DataSnapshotCollection = Backbone.Collection.extend({
+  model: DataSnapshot
+});
+
+var DataSnaphots = new DataSnapshotCollection;
+
+// **************************** VIEWS 
 
 var TableView = Backbone.View.extend({
-
   render: function() {
     return _.template($("#template-table").html())(this.model.toJSON());
   }
+});
 
+var DataSnaphotsView = Backbone.View.extend({
+  initialize : function(){
+  	DataSnaphots.bind('add',this.addOne, this);
+  	DataSnaphots.bind('reset', this.addAll, this);
+  	
+  	DataSnaphots.reset([
+  		{fields: ["field1","field2"], title: "View1", id: "view1"},
+  		{fields: ["field1","field2"], title: "View2", id: "view2"},
+  		{fields: ["field1","field2"], title: "View3", id: "view3"}
+  	]);	
+  },	
+
+  addOne : function(){
+  	
+  }, 	
+
+  addAll : function(){
+  	this.render();
+  },	
+
+  selectDefaultView : function(){
+  	$(".data-view-selector").first().trigger("click");
+  },
+
+  render: function() {
+  	$("#content").prepend(_.template($("#template-data-views").html())({views : DataSnaphots.toJSON()}));
+  	
+  	$(".data-view-selector").click(_.bind(function(e){	
+  		$(e.target).parent().parent().children(".active").removeClass("active");
+  		$(e.target).parent().addClass("active");
+  		
+  		this.selectedView = DataSnaphots.get($(e.target).attr("data-view-id"));
+  		this.trigger("selected-view-changed");
+  	
+  	}, this));
+  }
 });
