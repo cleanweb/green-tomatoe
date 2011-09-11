@@ -10,14 +10,16 @@ class State(models.Model):
         return 'State: %s' % self.code
 
 state_data_attrs = {
+    '__module__': __name__,
     'state': models.ForeignKey(State),
     'year': models.PositiveSmallIntegerField()
 }
 
 STATE_DATE_COLUMN_NAMES = {}
-for row in csv.reader(open(settings.STATE_DATA_COLUMNS_FILE, 'r')):
+for row in csv.reader(open(settings.STATE_DATA_COLUMNS_FILE, 'r'), delimiter='\t'):
     STATE_DATE_COLUMN_NAMES[row[0]]=row[1]
-    state_data_attrs[row[0]] = models.CharField(max_length=20)
+    state_data_attrs[row[0]] = models.CharField(max_length=20, null=True)
+
 
 StateData = type('SateData', (models.Model,), state_data_attrs)
 

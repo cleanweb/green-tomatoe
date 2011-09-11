@@ -15,7 +15,6 @@ def state_data_check(request):
         has_data = df_models.StateData.objects.filter(state__code=state_code, year=year)
     except:
         pass 
-
     return not has_data
 
 
@@ -58,14 +57,9 @@ class SpitColumns(http.RESTBase):
                 requested_data.append(getattr(row, column_code))
             resp['data'].append(requested_data)
 
-        resp = {"data": [["CA", "CA gas #1", "CA coal #1"], 
-                         ["PA", "PA gas #1", "PA coal #1"]], 
-                "columns":[{"desc": "", "title": "Gas"}, 
-                           {"desc": "", "title": "Coal"}]}
-
         return http.JSONResponse(resp)
 
-    def post(request):
+    def post(self, request):
         entity_name = request.REQUEST.get('datafeed_entity', '').lower()
 
         if entity_name not in SUPPORTED_ENTITIES:
@@ -75,8 +69,12 @@ class SpitColumns(http.RESTBase):
         for field in entity._meta.fields:
             value = request.REQUEST.get(field.name, None)
             if isinstance(field, base_models.ForeignKey):
-                value = field.rel.to.objects.get(pk=value)
-            setattr(entity, field.name, value)
+                if value:
+                    value = field.rel.to.objects.get(pk=value)
+            try:
+                setattr(entity, field.name, value)
+            except ValueError as e:
+               return http.JSONResponse({'status': 'failure', 'reason': unicode(e)}) 
 
         if entity_name in PREINSERT_CHECKS:
             if not PREINSERT_CHECKS[entity_name](request):
