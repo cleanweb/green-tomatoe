@@ -229,6 +229,8 @@
   			
   			var code = $(this).attr("data-state");
   			window.query.removeState(code);
+                        $(".allstates-selector-add").show().parent().removeClass('selected');
+                        $(".allstates-selector-remove").hide().parent().removeClass('selected'); 
   		});
   		
   		//** add all states
@@ -241,7 +243,7 @@
                         $(this).parent().toggleClass('selected'); 
   			$(this).parent().siblings().each(function(){
   				states.push($(this).attr("data-state"));
-                  				
+                                $(this).addClass('selected');                  		
   				$(this).children(".state-selector-remove").show();
   				$(this).children(".state-selector-add").hide();
   			});
@@ -257,6 +259,7 @@
   			$(this).parent().toggleClass('selected');
                         
   			$(this).parent().siblings().each(function(){
+                                $(this).removeClass('selected');
   				$(this).children(".state-selector-add").show();
   				$(this).children(".state-selector-remove").hide();
   			});
