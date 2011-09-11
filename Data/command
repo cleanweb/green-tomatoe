@@ -1,0 +1,1 @@
+awk '{print "curl -d \"datafeed_entity=state&code="$2"&name="$1"\" http://localhost:8081/datafeed/" }' stateNames.txt  | sed s/"XX"/"%20"/g > importStates.txt

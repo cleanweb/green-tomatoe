@@ -2,19 +2,34 @@
 
 import re
 
+name={}
+name[1]="TotalEnergy"
+name[2]="Coal"
+name[3]="NaturalGas"
+name[4]="Petroleum"
+name[5]="TotalFossilFuel"
+name[6]="NuclearElectricPower"
+name[7]="RenewableEnergy"
+name[8]="NetInterstateFlow"
+name[9]="NetElectricityImports"
+name[10]="EndUseResidential"
+name[11]="EndUseCommercial"
+name[12]="EndUseIndustrial"
+name[13]="EndUseTransportation"
+
 id=1
 #for state in range(56):
 #s = "{0:0}".format(state+1)
 #if len(s) == 1:
 #	s = "0" + s
 f = open('eiaC1.html', 'r')
-res = str(id)
+res = ""
 l = f.readline()
 nbCols = 0;
 while l:
 	if l.startswith('<td  colspan="1"  align="left"'):
 		m = re.search('(?<=Helvetica">)[^<]+', l)
-		res = res + "\t" + m.group(0).replace("&nbsp;", " ")
+		#res = res + "\t" + m.group(0).replace("&nbsp;", " ")
 
 	 	l = f.readline()
 		col = 0
@@ -28,13 +43,13 @@ while l:
 					if col>nbCols:
 						break
 				m = re.search('(?<=Helvetica">)[^<]+', l)
-				res = res + "\t" + m.group(0)
+				res = res + "&" + name[col] + "=" + m.group(0)
 				
 			l = f.readline()
 			
 		print res
 		id = id + 1
-		res = str(id)
+		res = ""
 		
 	else:
 		l = f.readline()
