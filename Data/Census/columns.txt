@@ -1,0 +1,52 @@
+Population	Population
+Populationpercentchange	Population, percent change
+Population	Population
+Personsunderyearsoldpercent	Persons under 5 years old, percent
+Personsunderyearsoldpercent	Persons under 18 years old, percent
+Personsyearsoldandoverpercent	Persons 65 years old and over, percent
+Femalepersonspercent	Female persons, percent
+Whitepersonspercent	White persons, percent
+Blackpersonspercent	Black persons, percent
+AmericanIndianandAlaskaNativepersonspercent	American Indian and Alaska Native persons, percent
+Asianpersonspercent	Asian persons, percent
+NativeHawaiianandOtherPacificIslanderpercent	Native Hawaiian and Other Pacific Islander, percent
+Personsreportingtwoormoreracespercent	Persons reporting two or more races, percent
+PersonsofHispanicorLatinooriginpercent	Persons of Hispanic or Latino origin, percent
+WhitepersonsnotHispanicpersons	White persons not Hispanic, persons
+Livinginsamehouseyearagopctyroldover	Living in same house 1 year ago, pct 1 yr old & over
+Foreignbornpersonspercent	Foreign born persons, percent,  2005-2009  
+LanguageotherthanEnglishspokenathomepctage	Language other than English spoken at home, pct age 5+
+Highschoolgraduatespercentofpersonsage	High school graduates, percent of persons age 25+
+Bachelorsdegreeorhigherpctofpersonsage	Bachelor's degree or higher, pct of persons age 25+
+Veterans	Veterans
+Meantraveltimetoworkminutesworkersage	Mean travel time to work (minutes), workers age 16+
+Housingunits	Housing units
+Homeownershiprate	Homeownership rate
+Housingunitsinmultiunitstructurespercent	Housing units in multi-unit structures, percent
+Medianvalueofowneroccupiedhousingunits	Median value of owner-occupied housing units
+Households	Households
+Personsperhousehold	Persons per household
+Percapitamoneyincomeinpastmonthsdollars	Per capita money income in past 12 months (2009 dollars) 2005-2009  
+Medianhouseholdincome	Median household income
+Personsbelowpovertylevelpercent	Persons below poverty level, percent
+Privatenonfarmestablishments	Private nonfarm establishments
+Privatenonfarmemployment	Private nonfarm employment
+Privatenonfarmemploymentpercentchange	Private nonfarm employment, percent change 2000-2008  
+Nonemployerestablishments	Nonemployer establishments
+Totalnumberoffirms	Total number of firms
+Blackownedfirmspercent	Black-owned firms, percent
+AmericanIndianandAlaskaNativeownedfirmspercent	American Indian and Alaska Native owned firms, percent
+Asianownedfirmspercent	Asian-owned firms, percent
+NativeHawaiianandOtherPacificIslanderownedfirmspercent	Native Hawaiian and Other Pacific Islander owned firms, percent
+Hispanicownedfirmspercent	Hispanic-owned firms, percent
+Womenownedfirmspercent	Women-owned firms, percent
+Manufacturersshipments	Manufacturers shipments
+Merchantwholesalersales	Merchant wholesaler sales
+Retailsales	Retail sales
+Retailsalespercapita	Retail sales per capita
+Accommodationandfoodservicessales	Accommodation and food services sales
+Buildingpermits	Building permits
+Federalspending	Federal spending
+Landarea	Land area
+Personspersquaremile	Persons per square mile
+FIPSCode	FIPS Code  

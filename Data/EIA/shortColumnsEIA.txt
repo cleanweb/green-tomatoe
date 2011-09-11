@@ -1,0 +1,13 @@
+TotalEnergy
+Coal
+NaturalGas	
+Petroleum
+TotalFossilFuel
+NuclearElectricPower	
+RenewableEnergy
+NetInterstateFlow
+NetElectricityImports	
+EndUseResidential	
+EndUseCommercial	
+EndUseIndustrial	
+EndUseTransportation

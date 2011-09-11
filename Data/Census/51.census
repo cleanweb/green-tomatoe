@@ -1,0 +1,857 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"DTD/xhtml1-transitional.dtd">
+
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<title>Virginia QuickFacts from the US Census Bureau</title>
+	<style type="text/css" media="screen">@import "/qfd/style.css";</style> 
+	<style type="text/css" media="screen">@import "/qfd/menus.css";</style> 
+	<link rel="stylesheet" type="text/css" media="print" href="/qfd/style_print.css" title="Print" />
+
+	<meta name="title" content="Virginia QuickFacts from the US Census Bureau" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="keywords" content="Virginia statistics, Virginia profile, 
+	        Virginia population, Census data for Virginia,
+                Virginia business statistics, Virginia information" />
+        <meta name="description" content="Frequently requested statistics
+                for Virginia." />
+
+        <!-- Site wide JS -->
+	<script type="text/javascript" src="/qfd/scripts/ruthsarian_utilities.js"></script>
+	<script type="text/javascript">
+	<!--
+	if ( ( typeof( sfHover ) ).toLowerCase() != 'undefined' ) 
+		{ event_attach( 'onload' , function () { 
+		sfHover( 'middlemenu' );
+		} ); }
+	//-->
+		</script>
+<script type="text/javascript" src="/qfd/scripts/unlink.js"></script>
+<script type="text/javascript" src="/qfd/scripts/jquery.js"></script>
+<!--End JavaScript Links-->
+
+        <script src="/qfd/scripts/prototype.js" type="text/javascript"></script>
+        <script src="/qfd/scripts/popBox.js" type="text/javascript"></script>
+	</head>
+<body onload="document.areaForm.Location.selectedIndex=0;
+                                      document.cityForm.Location.selectedIndex=0"><!-- START CB Header 2:24 PM 7/1/2009 -->
+<!-- 44px height -->
+<!-- newline whitespace removed -->
+<div id="cb_header"><a href="#SKIP_HDR" title="Skip Header"
+style="visibility:hidden; display:none;">Skip header section</a><div
+style="height:40px; min-width: 782px;
+_width:expression((this.parentNode.offsetWidth>782)?'auto':'782px');
+text-align:right; white-space:nowrap; overflow:hidden; margin:0; padding:0;
+background:#036 url(/qfd/img/cb_head_gradient.png) no-repeat top
+right; border-bottom:4px solid #09C;"><a href="http://www.census.gov/" style="float:left;"><img
+src="/qfd/img/cblogo.jpg" alt="US Census Bureau"
+style="width:275px; height:40px; padding:0; margin:0; border:none;"
+/></a><div style="display:inline;"><div style="padding:10px 0;
+white-space:nowrap;"><a
+href="http://www.census.gov/population/www/index.html" title="People &amp;
+Households" style="color:#FFF; background:none; font:bold 75% Arial,
+Helvetica, sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">People</span></a><span style="width:1px; overflow:hidden;
+border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/econ/www/index.html" title="Business &amp;
+Industry" style="color:#FFF; background:none; font:bold 75% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Business</span></a><span style="width:1px; overflow:hidden;
+border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/geo/www/index.html" title="Geography"
+style="color:#FFF; background:none; font:bold 75% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Geography</span></a><span style="width:1px;
+overflow:hidden; border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/pubinfo/www/news.html" title="newsroom"
+style="color:#FFF; background:none; font:bold 75% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Newsroom</span></a><span style="width:1px; overflow:hidden;
+border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/main/www/a2z/" title="Subjects A to Z"
+style="color:#FFF; background:none; font:bold 75% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Subjects A to Z</span></a><span style="width:1px;
+overflow:hidden; border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/main/www/srchtool.html" title="search at census"
+style="color:#FFF; background:none; font:bold 75% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Search@Census</span></a></div></div><div
+style="width:782px; height:1px; line-height:1px;">&nbsp;</div></div><a
+name="SKIP_HDR" style="visibility:hidden; display:none;"></a></div>
+<!-- END CB Header 2:24 PM 7/1/2009 -->
+
+<div id="masthead">
+ <div class="qf">State &amp; County QuickFacts</div>
+
+</div>
+<div id="dropdown" class="clearfix rMenu-hor rMenu noprint">
+    <ul id="middlemenu" class="clearfix rMenu-hor rMenu">
+         <li><a href="/qfd/index.html">Select a State</a></li>
+      <li><a href="/qfd/states/00000.html">USA QuickFacts</a></li>
+        <li><a href="/qfd/news.html">What's New</a> </li>
+         <li><a href="/qfd/faq.html">FAQ</a></li>
+
+    </ul>
+ <script type="text/javascript">
+    var unlinker = new Unlinker('#dropdown ul > li', 'a', function(container) {
+   $(container).addClass('selected');
+   //$(container).fadeTo(2000, 0.5, function() { $(container).removeClass('selected') });
+    });
+    unlinker.removeAllLinks();
+</script>
+  <noscript>
+  This Javascript highlights what section of the main navigation you are on and unlinks its URL.
+  </noscript>
+</div>
+
+<br />
+		<!--googleoff: all-->
+		<table class="noprint wrap" border="0" cellspacing="1" cellpadding="10"   
+		 summary="State navigation">
+  		<tr>
+    		<td align="left" valign="top" class="state2" >
+      		<form action="/cgi-bin/qfd/location" method="post" name="areaForm">
+      		<label class="smaller" for="County" accesskey="C" title="Select a County">Virginia counties</label>
+		- <a class="smaller" href="/qfd/maps/virginia_map.html"
+        	title="Get a county selection map.">selection map</a><br />
+		<select id="County" name="Location">
+      		<option value="51/51001.html">Select a county</option>
+<option value="51/51001.html">Accomack County</option>
+<option value="51/51003.html">Albemarle County</option>
+<option value="51/51005.html">Alleghany County</option>
+<option value="51/51007.html">Amelia County</option>
+<option value="51/51009.html">Amherst County</option>
+<option value="51/51011.html">Appomattox County</option>
+<option value="51/51013.html">Arlington County</option>
+<option value="51/51015.html">Augusta County</option>
+<option value="51/51017.html">Bath County</option>
+<option value="51/51019.html">Bedford County</option>
+<option value="51/51021.html">Bland County</option>
+<option value="51/51023.html">Botetourt County</option>
+<option value="51/51025.html">Brunswick County</option>
+<option value="51/51027.html">Buchanan County</option>
+<option value="51/51029.html">Buckingham County</option>
+<option value="51/51031.html">Campbell County</option>
+<option value="51/51033.html">Caroline County</option>
+<option value="51/51035.html">Carroll County</option>
+<option value="51/51036.html">Charles City County</option>
+<option value="51/51037.html">Charlotte County</option>
+<option value="51/51041.html">Chesterfield County</option>
+<option value="51/51043.html">Clarke County</option>
+<option value="51/51045.html">Craig County</option>
+<option value="51/51047.html">Culpeper County</option>
+<option value="51/51049.html">Cumberland County</option>
+<option value="51/51051.html">Dickenson County</option>
+<option value="51/51053.html">Dinwiddie County</option>
+<option value="51/51057.html">Essex County</option>
+<option value="51/51059.html">Fairfax County</option>
+<option value="51/51061.html">Fauquier County</option>
+<option value="51/51063.html">Floyd County</option>
+<option value="51/51065.html">Fluvanna County</option>
+<option value="51/51067.html">Franklin County</option>
+<option value="51/51069.html">Frederick County</option>
+<option value="51/51071.html">Giles County</option>
+<option value="51/51073.html">Gloucester County</option>
+<option value="51/51075.html">Goochland County</option>
+<option value="51/51077.html">Grayson County</option>
+<option value="51/51079.html">Greene County</option>
+<option value="51/51081.html">Greensville County</option>
+<option value="51/51083.html">Halifax County</option>
+<option value="51/51085.html">Hanover County</option>
+<option value="51/51087.html">Henrico County</option>
+<option value="51/51089.html">Henry County</option>
+<option value="51/51091.html">Highland County</option>
+<option value="51/51093.html">Isle of Wight County</option>
+<option value="51/51095.html">James City County</option>
+<option value="51/51097.html">King and Queen County</option>
+<option value="51/51099.html">King George County</option>
+<option value="51/51101.html">King William County</option>
+<option value="51/51103.html">Lancaster County</option>
+<option value="51/51105.html">Lee County</option>
+<option value="51/51107.html">Loudoun County</option>
+<option value="51/51109.html">Louisa County</option>
+<option value="51/51111.html">Lunenburg County</option>
+<option value="51/51113.html">Madison County</option>
+<option value="51/51115.html">Mathews County</option>
+<option value="51/51117.html">Mecklenburg County</option>
+<option value="51/51119.html">Middlesex County</option>
+<option value="51/51121.html">Montgomery County</option>
+<option value="51/51125.html">Nelson County</option>
+<option value="51/51127.html">New Kent County</option>
+<option value="51/51131.html">Northampton County</option>
+<option value="51/51133.html">Northumberland County</option>
+<option value="51/51135.html">Nottoway County</option>
+<option value="51/51137.html">Orange County</option>
+<option value="51/51139.html">Page County</option>
+<option value="51/51141.html">Patrick County</option>
+<option value="51/51143.html">Pittsylvania County</option>
+<option value="51/51145.html">Powhatan County</option>
+<option value="51/51147.html">Prince Edward County</option>
+<option value="51/51149.html">Prince George County</option>
+<option value="51/51153.html">Prince William County</option>
+<option value="51/51155.html">Pulaski County</option>
+<option value="51/51157.html">Rappahannock County</option>
+<option value="51/51159.html">Richmond County</option>
+<option value="51/51161.html">Roanoke County</option>
+<option value="51/51163.html">Rockbridge County</option>
+<option value="51/51165.html">Rockingham County</option>
+<option value="51/51167.html">Russell County</option>
+<option value="51/51169.html">Scott County</option>
+<option value="51/51171.html">Shenandoah County</option>
+<option value="51/51173.html">Smyth County</option>
+<option value="51/51175.html">Southampton County</option>
+<option value="51/51177.html">Spotsylvania County</option>
+<option value="51/51179.html">Stafford County</option>
+<option value="51/51181.html">Surry County</option>
+<option value="51/51183.html">Sussex County</option>
+<option value="51/51185.html">Tazewell County</option>
+<option value="51/51187.html">Warren County</option>
+<option value="51/51191.html">Washington County</option>
+<option value="51/51193.html">Westmoreland County</option>
+<option value="51/51195.html">Wise County</option>
+<option value="51/51197.html">Wythe County</option>
+<option value="51/51199.html">York County</option>
+<option value="51/51510.html">Alexandria city</option>
+<option value="51/51515.html">Bedford city</option>
+<option value="51/51520.html">Bristol city</option>
+<option value="51/51530.html">Buena Vista city</option>
+<option value="51/51540.html">Charlottesville city</option>
+<option value="51/51550.html">Chesapeake city</option>
+<option value="51/51570.html">Colonial Heights city</option>
+<option value="51/51580.html">Covington city</option>
+<option value="51/51590.html">Danville city</option>
+<option value="51/51595.html">Emporia city</option>
+<option value="51/51600.html">Fairfax city</option>
+<option value="51/51610.html">Falls Church city</option>
+<option value="51/51620.html">Franklin city</option>
+<option value="51/51630.html">Fredericksburg city</option>
+<option value="51/51640.html">Galax city</option>
+<option value="51/51650.html">Hampton city</option>
+<option value="51/51660.html">Harrisonburg city</option>
+<option value="51/51670.html">Hopewell city</option>
+<option value="51/51678.html">Lexington city</option>
+<option value="51/51680.html">Lynchburg city</option>
+<option value="51/51683.html">Manassas city</option>
+<option value="51/51685.html">Manassas Park city</option>
+<option value="51/51690.html">Martinsville city</option>
+<option value="51/51700.html">Newport News city</option>
+<option value="51/51710.html">Norfolk city</option>
+<option value="51/51720.html">Norton city</option>
+<option value="51/51730.html">Petersburg city</option>
+<option value="51/51735.html">Poquoson city</option>
+<option value="51/51740.html">Portsmouth city</option>
+<option value="51/51750.html">Radford city</option>
+<option value="51/51760.html">Richmond city</option>
+<option value="51/51770.html">Roanoke city</option>
+<option value="51/51775.html">Salem city</option>
+<option value="51/51790.html">Staunton city</option>
+<option value="51/51800.html">Suffolk city</option>
+<option value="51/51810.html">Virginia Beach city</option>
+<option value="51/51820.html">Waynesboro city</option>
+<option value="51/51830.html">Williamsburg city</option>
+<option value="51/51840.html">Winchester city</option>
+</select> <input type="submit" src="/qfd/img/go.gif" value="Go" 
+		            name="Go" /></form></td>
+    		<td align="left" valign="top" class="state2" >
+        	<form action="/cgi-bin/qfd/location" method="post" name="cityForm">
+        	<label for="Place" accesskey="P" class="smaller" 
+		title="Select a City">Virginia cities</label>
+		- <a class="smaller" 
+		href="/cgi-bin/qfd/lookup?state=51000">place search</a><br />
+		<select id="Place" name="Location">
+        	<option value="51/510000.html">Select a city</option>
+<option value="51/5101000.html">Alexandria (city)</option>
+<option value="51/5103000.html">Arlington CDP</option>
+<option value="51/5107784.html">Blacksburg (town)</option>
+<option value="51/5114968.html">Charlottesville (city)</option>
+<option value="51/5116000.html">Chesapeake (city)</option>
+<option value="51/5121344.html">Danville (city)</option>
+<option value="51/5135000.html">Hampton (city)</option>
+<option value="51/5135624.html">Harrisonburg (city)</option>
+<option value="51/5144984.html">Leesburg (town)</option>
+<option value="51/5147672.html">Lynchburg (city)</option>
+<option value="51/5148952.html">Manassas (city)</option>
+<option value="51/5156000.html">Newport News (city)</option>
+<option value="51/5157000.html">Norfolk (city)</option>
+<option value="51/5161832.html">Petersburg (city)</option>
+<option value="51/5164000.html">Portsmouth (city)</option>
+<option value="51/5167000.html">Richmond (city)</option>
+<option value="51/5168000.html">Roanoke (city)</option>
+<option value="51/5176432.html">Suffolk (city)</option>
+<option value="51/5182000.html">Virginia Beach (city)</option>
+<option value="/cgi-bin/qfd/demolink?51">**Other places not listed</option>
+</select> <input type="submit" value="Go" name="Go" /> </form></td>
+<td class="state2" align="left" valign="top">
+			
+
+			<img src="/qfd/img/arrow.gif" alt="" align="middle" /> <a class="smaller" 
+			href="/qfd/states/51000lk.html">More Virginia data sets</a><br />
+			
+</td></tr></table><!--googleon: all-->
+<h2>Virginia </h2><table border="0" width="100%" class="noprint"><tr valign="bottom"><td class="noprint"><a name="content"> </a>
+		  <img src="/qfd/img/infoicon.gif" alt="Info " border="0" /> Further information 
+		  </td><td align="right" class="noprint">
+Want more? <a class="more" href="/qfd/states/51000lk.html">Browse data sets for Virginia</a></td></tr></table><table title="People QuickFacts" border="0" cellpadding="2" cellspacing="0" width="100%" summary="This table displays data items about People.">
+<tr>
+		<th align="center" class="shaded" valign="bottom">&nbsp; &nbsp;</th>
+		<th align="left" class="shaded" valign="bottom" width="68%"><b>People QuickFacts</b></th>
+                <th id="p1" class="shaded" align="center" valign="bottom" width="15%"><b>Virginia</b></th>
+                <th id="p2" class="shaded" align="center" valign="bottom" width="15%"><b>USA</b></th></tr>
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_POP010210.htm"><img 
+                        id="POP010210" 
+			src="/qfd/img/infoicon.gif"  alt="Population definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp1">Population, 2010  <!-- POP010210 -->  </td>
+                <td headers="rp1 p1" align="right" valign="bottom">8,001,024<sup></sup></td><td headers="rp1 p2" align="right" valign="bottom">308,745,538<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_POP050210.htm"><img 
+                        id="POP050210" 
+			src="/qfd/img/infoicon.gif"  alt="Population, percent change definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp2">Population, percent change, 2000 to 2010  <!-- POP050210 -->  </td>
+                <td headers="rp2 p1" align="right" valign="bottom">13.0%<sup></sup></td><td headers="rp2 p2" align="right" valign="bottom">9.7%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_PST040200.htm"><img 
+                        id="PST040200" 
+			src="/qfd/img/infoicon.gif"  alt="Population definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp3">Population, 2000  <!-- PST040200 -->  </td>
+                <td headers="rp3 p1" align="right" valign="bottom">7,079,048<sup></sup></td><td headers="rp3 p2" align="right" valign="bottom">281,424,602<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_AGE135209.htm"><img 
+                        id="AGE135209" 
+			src="/qfd/img/infoicon.gif"  alt="Persons under 5 years old, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp4">Persons under 5 years old, percent, 2009  <!-- AGE135209 -->  </td>
+                <td headers="rp4 p1" align="right" valign="bottom">6.8%<sup></sup></td><td headers="rp4 p2" align="right" valign="bottom">6.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_AGE295209.htm"><img 
+                        id="AGE295209" 
+			src="/qfd/img/infoicon.gif"  alt="Persons under 18 years old, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp5">Persons under 18 years old, percent, 2009  <!-- AGE295209 -->  </td>
+                <td headers="rp5 p1" align="right" valign="bottom">23.4%<sup></sup></td><td headers="rp5 p2" align="right" valign="bottom">24.3%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_AGE775209.htm"><img 
+                        id="AGE775209" 
+			src="/qfd/img/infoicon.gif"  alt="Persons 65 years old and over, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp6">Persons 65 years old and over, percent, 2009  <!-- AGE775209 -->  </td>
+                <td headers="rp6 p1" align="right" valign="bottom">12.2%<sup></sup></td><td headers="rp6 p2" align="right" valign="bottom">12.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SEX255209.htm"><img 
+                        id="SEX255209" 
+			src="/qfd/img/infoicon.gif"  alt="Female persons, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp7">Female persons, percent, 2009  <!-- SEX255209 -->  </td>
+                <td headers="rp7 p1" align="right" valign="bottom">50.8%<sup></sup></td><td headers="rp7 p2" align="right" valign="bottom">50.7%<sup></sup></td>
+</tr>
+<tr><td class="spacer" colspan="4" height="5">&nbsp;</td></tr>
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI105210.htm"><img 
+                        id="RHI105210" 
+			src="/qfd/img/infoicon.gif"  alt="White persons, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp8">White persons, percent, 2010 (a)  <!-- RHI105210 -->  </td>
+                <td headers="rp8 p1" align="right" valign="bottom">68.6%<sup></sup></td><td headers="rp8 p2" align="right" valign="bottom">72.4%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI205210.htm"><img 
+                        id="RHI205210" 
+			src="/qfd/img/infoicon.gif"  alt="Black persons, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp9">Black persons, percent, 2010 (a)  <!-- RHI205210 -->  </td>
+                <td headers="rp9 p1" align="right" valign="bottom">19.4%<sup></sup></td><td headers="rp9 p2" align="right" valign="bottom">12.6%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI305210.htm"><img 
+                        id="RHI305210" 
+			src="/qfd/img/infoicon.gif"  alt="American Indian and Alaska Native persons, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp10">American Indian and Alaska Native persons, percent, 2010 (a)  <!-- RHI305210 -->  </td>
+                <td headers="rp10 p1" align="right" valign="bottom">0.4%<sup></sup></td><td headers="rp10 p2" align="right" valign="bottom">0.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI405210.htm"><img 
+                        id="RHI405210" 
+			src="/qfd/img/infoicon.gif"  alt="Asian persons, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp11">Asian persons, percent, 2010 (a)  <!-- RHI405210 -->  </td>
+                <td headers="rp11 p1" align="right" valign="bottom">5.5%<sup></sup></td><td headers="rp11 p2" align="right" valign="bottom">4.8%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI505210.htm"><img 
+                        id="RHI505210" 
+			src="/qfd/img/infoicon.gif"  alt="Native Hawaiian and Other Pacific Islander, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp12">Native Hawaiian and Other Pacific Islander, percent, 2010 (a)  <!-- RHI505210 -->  </td>
+                <td headers="rp12 p1" align="right" valign="bottom">0.1%<sup></sup></td><td headers="rp12 p2" align="right" valign="bottom">0.2%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI605210.htm"><img 
+                        id="RHI605210" 
+			src="/qfd/img/infoicon.gif"  alt="Persons reporting two or more races, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp13">Persons reporting two or more races, percent, 2010  <!-- RHI605210 -->  </td>
+                <td headers="rp13 p1" align="right" valign="bottom">2.9%<sup></sup></td><td headers="rp13 p2" align="right" valign="bottom">2.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI705210.htm"><img 
+                        id="RHI705210" 
+			src="/qfd/img/infoicon.gif"  alt="Persons of Hispanic or Latino origin, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp14">Persons of Hispanic or Latino origin, percent, 2010 (b)  <!-- RHI705210 -->  </td>
+                <td headers="rp14 p1" align="right" valign="bottom">7.9%<sup></sup></td><td headers="rp14 p2" align="right" valign="bottom">16.3%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RHI805210.htm"><img 
+                        id="RHI805210" 
+			src="/qfd/img/infoicon.gif"  alt="White persons not Hispanic, persons definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp15">White persons not Hispanic, persons, 2010  <!-- RHI805210 -->  </td>
+                <td headers="rp15 p1" align="right" valign="bottom">64.8%<sup></sup></td><td headers="rp15 p2" align="right" valign="bottom">63.7%<sup></sup></td>
+</tr>
+<tr><td class="spacer" colspan="4" height="5">&nbsp;</td></tr>
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_POP715209.htm"><img 
+                        id="POP715209" 
+			src="/qfd/img/infoicon.gif"  alt="Living in same house 1 year ago, pct 1 yr old & over definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp16">Living in same house 1 year ago, pct 1 yr old & over, 2005-2009  <!-- POP715209 -->  </td>
+                <td headers="rp16 p1" align="right" valign="bottom">83.3%<sup></sup></td><td headers="rp16 p2" align="right" valign="bottom">83.8%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_POP645209.htm"><img 
+                        id="POP645209" 
+			src="/qfd/img/infoicon.gif"  alt="Foreign born persons, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp17">Foreign born persons, percent,  2005-2009  <!-- POP645209 -->  </td>
+                <td headers="rp17 p1" align="right" valign="bottom">10.1%<sup></sup></td><td headers="rp17 p2" align="right" valign="bottom">12.4%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_POP815209.htm"><img 
+                        id="POP815209" 
+			src="/qfd/img/infoicon.gif"  alt="Language other than English spoken at home, pct age 5+ definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp18">Language other than English spoken at home, pct age 5+, 2005-2009  <!-- POP815209 -->  </td>
+                <td headers="rp18 p1" align="right" valign="bottom">13.2%<sup></sup></td><td headers="rp18 p2" align="right" valign="bottom">19.6%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_EDU635209.htm"><img 
+                        id="EDU635209" 
+			src="/qfd/img/infoicon.gif"  alt="High school graduates, percent of persons age 25+ definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp19">High school graduates, percent of persons age 25+, 2005-2009  <!-- EDU635209 -->  </td>
+                <td headers="rp19 p1" align="right" valign="bottom">85.8%<sup></sup></td><td headers="rp19 p2" align="right" valign="bottom">84.6%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_EDU685209.htm"><img 
+                        id="EDU685209" 
+			src="/qfd/img/infoicon.gif"  alt="Bachelor's degree or higher, pct of persons age 25+ definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp20">Bachelor's degree or higher, pct of persons age 25+, 2005-2009  <!-- EDU685209 -->  </td>
+                <td headers="rp20 p1" align="right" valign="bottom">33.4%<sup></sup></td><td headers="rp20 p2" align="right" valign="bottom">27.5%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_VET605209.htm"><img 
+                        id="VET605209" 
+			src="/qfd/img/infoicon.gif"  alt="Veterans definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp21">Veterans, 2005-2009  <!-- VET605209 -->  </td>
+                <td headers="rp21 p1" align="right" valign="bottom">748,345<sup></sup></td><td headers="rp21 p2" align="right" valign="bottom">22,894,578<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_LFE305209.htm"><img 
+                        id="LFE305209" 
+			src="/qfd/img/infoicon.gif"  alt="Mean travel time to work (minutes), workers age 16+ definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp22">Mean travel time to work (minutes), workers age 16+, 2005-2009  <!-- LFE305209 -->  </td>
+                <td headers="rp22 p1" align="right" valign="bottom">26.9<sup></sup></td><td headers="rp22 p2" align="right" valign="bottom">25.2<sup></sup></td>
+</tr>
+<tr><td class="spacer" colspan="4" height="5">&nbsp;</td></tr>
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_HSG010209.htm"><img 
+                        id="HSG010209" 
+			src="/qfd/img/infoicon.gif"  alt="Housing units definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp23">Housing units, 2009  <!-- HSG010209 -->  </td>
+                <td headers="rp23 p1" align="right" valign="bottom">3,330,465<sup></sup></td><td headers="rp23 p2" align="right" valign="bottom">129,969,653<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_HSG445209.htm"><img 
+                        id="HSG445209" 
+			src="/qfd/img/infoicon.gif"  alt="Homeownership rate definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp24">Homeownership rate, 2005-2009  <!-- HSG445209 -->  </td>
+                <td headers="rp24 p1" align="right" valign="bottom">69.2%<sup></sup></td><td headers="rp24 p2" align="right" valign="bottom">66.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_HSG096209.htm"><img 
+                        id="HSG096209" 
+			src="/qfd/img/infoicon.gif"  alt="Housing units in multi-unit structures, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp25">Housing units in multi-unit structures, percent, 2005-2009  <!-- HSG096209 -->  </td>
+                <td headers="rp25 p1" align="right" valign="bottom">21.3%<sup></sup></td><td headers="rp25 p2" align="right" valign="bottom">25.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_HSG495209.htm"><img 
+                        id="HSG495209" 
+			src="/qfd/img/infoicon.gif"  alt="Median value of owner-occupied housing units definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp26">Median value of owner-occupied housing units, 2005-2009  <!-- HSG495209 -->  </td>
+                <td headers="rp26 p1" align="right" valign="bottom">$247,100<sup></sup></td><td headers="rp26 p2" align="right" valign="bottom">$185,400<sup></sup></td>
+</tr>
+<tr><td class="spacer" colspan="4" height="5">&nbsp;</td></tr>
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_HSD410209.htm"><img 
+                        id="HSD410209" 
+			src="/qfd/img/infoicon.gif"  alt="Households definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp27">Households, 2005-2009  <!-- HSD410209 -->  </td>
+                <td headers="rp27 p1" align="right" valign="bottom">2,936,634<sup></sup></td><td headers="rp27 p2" align="right" valign="bottom">112,611,029<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_HSD310209.htm"><img 
+                        id="HSD310209" 
+			src="/qfd/img/infoicon.gif"  alt="Persons per household definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp28">Persons per household, 2005-2009  <!-- HSD310209 -->  </td>
+                <td headers="rp28 p1" align="right" valign="bottom">2.54<sup></sup></td><td headers="rp28 p2" align="right" valign="bottom">2.60<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_INC910209.htm"><img 
+                        id="INC910209" 
+			src="/qfd/img/infoicon.gif"  alt=" definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp29">Per capita money income in past 12 months (2009 dollars) 2005-2009  <!-- INC910209 -->  </td>
+                <td headers="rp29 p1" align="right" valign="bottom">$31,606<sup></sup></td><td headers="rp29 p2" align="right" valign="bottom">$27,041<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_IPE010209.htm"><img 
+                        id="IPE010209" 
+			src="/qfd/img/infoicon.gif"  alt="Median household income definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp30">Median household income, 2009  <!-- IPE010209 -->  </td>
+                <td headers="rp30 p1" align="right" valign="bottom">$59,372<sup></sup></td><td headers="rp30 p2" align="right" valign="bottom">$50,221<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_IPE120209.htm"><img 
+                        id="IPE120209" 
+			src="/qfd/img/infoicon.gif"  alt="Persons below poverty level, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rp31">Persons below poverty level, percent, 2009  <!-- IPE120209 -->  </td>
+                <td headers="rp31 p1" align="right" valign="bottom">10.6%<sup></sup></td><td headers="rp31 p2" align="right" valign="bottom">14.3%<sup></sup></td>
+</tr>
+</table><table title="Business QuickFacts" border="0" cellpadding="2" cellspacing="0" width="100%" summary="This table displays data items about Business.">
+<tr>
+		<th align="center" class="shaded" valign="bottom">&nbsp; &nbsp;</th>
+		<th align="left" class="shaded" valign="bottom" width="68%"><b>Business QuickFacts</b></th>
+                <th id="e1" class="shaded" align="center" valign="bottom" width="15%"><b>Virginia</b></th>
+                <th id="e2" class="shaded" align="center" valign="bottom" width="15%"><b>USA</b></th></tr>
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_BZA010208.htm"><img 
+                        id="BZA010208" 
+			src="/qfd/img/infoicon.gif"  alt="Private nonfarm establishments definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re1">Private nonfarm establishments, 2008  <!-- BZA010208 -->  </td>
+                <td headers="re1 e1" align="right" valign="bottom">197,716<sup>1</sup></td><td headers="re1 e2" align="right" valign="bottom">7,601,169<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_BZA110208.htm"><img 
+                        id="BZA110208" 
+			src="/qfd/img/infoicon.gif"  alt="Private nonfarm employment definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re2">Private nonfarm employment, 2008  <!-- BZA110208 -->  </td>
+                <td headers="re2 e1" align="right" valign="bottom">3,184,234<sup>1</sup></td><td headers="re2 e2" align="right" valign="bottom">120,903,551<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_BZA115208.htm"><img 
+                        id="BZA115208" 
+			src="/qfd/img/infoicon.gif"  alt="Private nonfarm employment definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re3">Private nonfarm employment, percent change 2000-2008  <!-- BZA115208 -->  </td>
+                <td headers="re3 e1" align="right" valign="bottom">9.7%<sup>1</sup></td><td headers="re3 e2" align="right" valign="bottom">6.0%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_NES010208.htm"><img 
+                        id="NES010208" 
+			src="/qfd/img/infoicon.gif"  alt="Nonemployer establishments definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re4">Nonemployer establishments, 2008  <!-- NES010208 -->  </td>
+                <td headers="re4 e1" align="right" valign="bottom">494,516<sup></sup></td><td headers="re4 e2" align="right" valign="bottom">21,351,320<sup></sup></td>
+</tr>
+<tr><td class="spacer" colspan="4" height="5">&nbsp;</td></tr>
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO001207.htm"><img 
+                        id="SBO001207" 
+			src="/qfd/img/infoicon.gif"  alt="Total number of firms definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re5">Total number of firms, 2007  <!-- SBO001207 -->  </td>
+                <td headers="re5 e1" align="right" valign="bottom">638,823<sup></sup></td><td headers="re5 e2" align="right" valign="bottom">27,097,236<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO315207.htm"><img 
+                        id="SBO315207" 
+			src="/qfd/img/infoicon.gif"  alt="Black-owned firms, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re6">Black-owned firms, percent, 2007  <!-- SBO315207 -->  </td>
+                <td headers="re6 e1" align="right" valign="bottom">9.9%<sup></sup></td><td headers="re6 e2" align="right" valign="bottom">7.1%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO115207.htm"><img 
+                        id="SBO115207" 
+			src="/qfd/img/infoicon.gif"  alt="American Indian and Alaska Native owned firms, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re7">American Indian and Alaska Native owned firms, percent, 2007  <!-- SBO115207 -->  </td>
+                <td headers="re7 e1" align="right" valign="bottom">0.5%<sup></sup></td><td headers="re7 e2" align="right" valign="bottom">0.9%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO215202.htm"><img 
+                        id="SBO215202" 
+			src="/qfd/img/infoicon.gif"  alt="Asian-owned firms, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re8">Asian-owned firms, percent, 2002  <!-- SBO215202 -->  </td>
+                <td headers="re8 e1" align="right" valign="bottom">5.8%<sup></sup></td><td headers="re8 e2" align="right" valign="bottom">4.8%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO515207.htm"><img 
+                        id="SBO515207" 
+			src="/qfd/img/infoicon.gif"  alt="Native Hawaiian and Other Pacific Islander owned firms, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re9">Native Hawaiian and Other Pacific Islander owned firms, percent, 2007  <!-- SBO515207 -->  </td>
+                <td headers="re9 e1" align="right" valign="bottom">0.1%<sup></sup></td><td headers="re9 e2" align="right" valign="bottom">0.1%<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO415207.htm"><img 
+                        id="SBO415207" 
+			src="/qfd/img/infoicon.gif"  alt="Hispanic-owned firms, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re10">Hispanic-owned firms, percent, 2007  <!-- SBO415207 -->  </td>
+                <td headers="re10 e1" align="right" valign="bottom">4.5%<sup></sup></td><td headers="re10 e2" align="right" valign="bottom">8.3%<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_SBO015207.htm"><img 
+                        id="SBO015207" 
+			src="/qfd/img/infoicon.gif"  alt="Women-owned firms, percent definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re11">Women-owned firms, percent, 2007  <!-- SBO015207 -->  </td>
+                <td headers="re11 e1" align="right" valign="bottom">30.1%<sup></sup></td><td headers="re11 e2" align="right" valign="bottom">28.8%<sup></sup></td>
+</tr>
+<tr><td class="spacer" colspan="4" height="5">&nbsp;</td></tr>
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_MAN450207.htm"><img 
+                        id="MAN450207" 
+			src="/qfd/img/infoicon.gif"  alt="Manufacturers shipments definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re12">Manufacturers shipments, 2007 ($1000)  <!-- MAN450207 -->  </td>
+                <td headers="re12 e1" align="right" valign="bottom">92,417,797<sup></sup></td><td headers="re12 e2" align="right" valign="bottom">5,338,306,501<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_WTN220207.htm"><img 
+                        id="WTN220207" 
+			src="/qfd/img/infoicon.gif"  alt="Merchant wholesaler sales definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re13">Merchant wholesaler sales, 2007 ($1000)  <!-- WTN220207 -->  </td>
+                <td headers="re13 e1" align="right" valign="bottom">60,513,396<sup></sup></td><td headers="re13 e2" align="right" valign="bottom">4,174,286,516<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RTN130207.htm"><img 
+                        id="RTN130207" 
+			src="/qfd/img/infoicon.gif"  alt="Retail sales definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re14">Retail sales, 2007 ($1000)  <!-- RTN130207 -->  </td>
+                <td headers="re14 e1" align="right" valign="bottom">105,663,299<sup></sup></td><td headers="re14 e2" align="right" valign="bottom">3,917,663,456<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_RTN131207.htm"><img 
+                        id="RTN131207" 
+			src="/qfd/img/infoicon.gif"  alt="Retail sales per capita definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re15">Retail sales per capita, 2007  <!-- RTN131207 -->  </td>
+                <td headers="re15 e1" align="right" valign="bottom">$13,687<sup></sup></td><td headers="re15 e2" align="right" valign="bottom">$12,990<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_AFN120207.htm"><img 
+                        id="AFN120207" 
+			src="/qfd/img/infoicon.gif"  alt="Accommodation and food services sales definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re16">Accommodation and food services sales, 2007 ($1000)  <!-- AFN120207 -->  </td>
+                <td headers="re16 e1" align="right" valign="bottom">15,340,483<sup></sup></td><td headers="re16 e2" align="right" valign="bottom">613,795,732<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_BPS030209.htm"><img 
+                        id="BPS030209" 
+			src="/qfd/img/infoicon.gif"  alt="Building permits definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re17">Building permits, 2009  <!-- BPS030209 -->  </td>
+                <td headers="re17 e1" align="right" valign="bottom">21,452<sup></sup></td><td headers="re17 e2" align="right" valign="bottom">582,963<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_FED110208.htm"><img 
+                        id="FED110208" 
+			src="/qfd/img/infoicon.gif"  alt="Federal spending definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="re18">Federal spending, 2008  <!-- FED110208 -->  </td>
+                <td headers="re18 e1" align="right" valign="bottom">118,526,703<sup>1</sup></td><td headers="re18 e2" align="right" valign="bottom">2,771,782,152<sup>2</sup></td>
+</tr>
+</table><table title="Geography QuickFacts" border="0" cellpadding="2" cellspacing="0" width="100%" summary="This table displays data items about Geography.">
+<tr>
+		<th align="center" class="shaded" valign="bottom">&nbsp; &nbsp;</th>
+		<th align="left" class="shaded" valign="bottom" width="68%"><b>Geography QuickFacts</b></th>
+                <th id="g1" class="shaded" align="center" valign="bottom" width="15%"><b>Virginia</b></th>
+                <th id="g2" class="shaded" align="center" valign="bottom" width="15%"><b>USA</b></th></tr>
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_LND110200.htm"><img 
+                        id="LND110200" 
+			src="/qfd/img/infoicon.gif"  alt="Land area definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rg1">Land area, 2000 (square miles)  <!-- LND110200 -->  </td>
+                <td headers="rg1 g1" align="right" valign="bottom">39,594.07<sup></sup></td><td headers="rg1 g2" align="right" valign="bottom">3,537,438.44<sup></sup></td>
+</tr>
+
+<tr class="shaded2" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_POP060210.htm"><img 
+                        id="POP060210" 
+			src="/qfd/img/infoicon.gif"  alt="Persons per square mile definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rg2">Persons per square mile, 2010  <!-- POP060210 -->  </td>
+                <td headers="rg2 g1" align="right" valign="bottom">202.1<sup></sup></td><td headers="rg2 g2" align="right" valign="bottom">87.3<sup></sup></td>
+</tr>
+
+<tr class="shaded1" valign="top"> <td valign="top">
+<a href="/qfd/meta/long_fips.htm"><img 
+                        id="fips" 
+			src="/qfd/img/infoicon.gif"  alt=" definition and source info" 
+			border="0" /></a> </td>
+<td valign="top" id="rg3">FIPS Code  <!-- FIPS -->  </td>
+                <td headers="rg3 g1" align="right" valign="bottom">51<sup></sup></td><td headers="rg3 g2" align="right" valign="bottom"> <sup></sup></td>
+</tr>
+</table><br />
+<div class="footnote">
+1: Includes data not distributed by county.<br />2: Includes data not distributed by state.<br /><br /><a href="/cgi-bin/qfd/extract?51000">Download these tables - delimited</a> <span class="noprint"> | </span>
+<a href="/cgi-bin/qfd/extract-xls?51000">Download these tables - Excel</a><span class="noprint"> | </span>
+<a href="/qfd/download_data.html">Download the full data set</a>
+</div><br /><div class="footnote">
+(a) Includes persons reporting only one race.<br />
+ (b) Hispanics may be of any race, so also are included in applicable race categories.
+ <br />
+ <br />D: Suppressed to avoid disclosure of confidential information
+ <br />F: Fewer than 100 firms
+ <br />FN: Footnote on this item for this area in place of data
+ <br />NA: Not available 
+ <br />S: Suppressed; does not meet publication standards
+ <br />X: Not applicable 
+ <br />Z: Value greater than zero but less than half unit of measure shown
+ 
+</div>
+<span class="footnote noprint"><a href="https://ask.census.gov/cgi-bin/askcensus.cfg/php/enduser/ask.php"><br />What do you think of QuickFacts?</a></span><br /> 
+<br /><span class="footnote">Source U.S. Census Bureau: State and County QuickFacts. Data derived from Population Estimates, Census of Population and Housing, Small Area Income and Poverty Estimates, State and County Housing Unit Estimates, County Business Patterns, Nonemployer Statistics, Economic Census, Survey of Business Owners, Building Permits, Consolidated Federal Funds Report</span>
+<br /><span class="footnote">Last Revised: Friday, 03-Jun-2011 15:22:36 EDT</span><!-- START FOOTER 37px height 11:15 AM 4/12/2011 -->
+<!-- wordwrap at col 78 -->
+<div id="cb_footer"><div style="height:37px; min-width:782px;
+_width:expression((this.parentNode.offsetWidth>782)?'auto':'782px');
+text-align:right; margin:0; padding:0; background:#036
+url(http://www.census.gov/main/www/m-img/cb_head_gradient.png) no-repeat top right; border-top:3px
+solid #09C;"><a href="#SKIP_FTR" title="Skip Footer" style="visibility:hidden;
+display:none;">Skip footer section</a><div style="display:inline;"><div style="padding:7px
+0;"><a href="http://www.census.gov/privacy/" title="Privacy Policy"
+style="color:#FFF; background:none; font:bold 80% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Privacy Policy</span></a><span style="width:1px;
+overflow:hidden; border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://2010.census.gov/2010census/" title="2010 Census"
+style="color:#FFF; background:none; font:bold 80% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center; background:none;">2010
+Census</span></a><span style="width:1px; overflow:hidden; border-left:1px
+solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/main/www/access.html" title="Data Tools"
+style="color:#FFF; background:none; font:bold 80% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center; background:none;">Data
+Tools</span></a><span style="width:1px; overflow:hidden; border-left:1px solid
+#E6EFF6;">&nbsp;</span><a href="http://www.census.gov/quality/"
+title="Information Quality" style="color:#FFF; background:none; font:bold 80%
+Arial, Helvetica, sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Information Quality</span></a><span style="width:1px;
+overflow:hidden; border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/mp/www/cat/" title="Product Catalog"
+style="color:#FFF; background:none; font:bold 80% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Product Catalog</span></a><span style="width:1px;
+overflow:hidden; border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/aboutus/contacts.html" title="Contact Us"
+style="color:#FFF; background:none; font:bold 80% Arial, Helvetica,
+sans-serif; text-decoration:none; white-space:nowrap;"><span
+style="padding:10px 4px; margin:0px; text-align:center;
+background:none;">Contact Us</span></a><span style="width:1px;
+overflow:hidden; border-left:1px solid #E6EFF6;">&nbsp;</span><a
+href="http://www.census.gov/" title="Home" style="color:#FFF; background:none;
+font:bold 80% Arial, Helvetica, sans-serif; text-decoration:none;
+white-space:nowrap;"><span style="padding:10px 4px; margin:0px;
+text-align:center; background:none;">Home</span></a></div></div><a
+name="SKIP_FTR" style="visibility:hidden; display:none;"></a></div></div>
+
+<!-- Foresee Survey -->
+<script type="text/javascript" src="http://www.census.gov/fsrscripts/foresee-trigger.js"></script>
+<!-- End Foresee Survey -->
+<!-- END FOOTER 11:15 AM 4/12/2011 --></body></html>

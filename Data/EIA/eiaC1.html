@@ -1,0 +1,1050 @@
+<!-- ************************************************************** -->
+<!-- Name: State Data Tables                                        -->
+<!-- File: 
+<!-- Author: Energy Information Administration                      -->
+<!-- Release: February 2008                                            -->
+<!-- Revised: 5/19/2008                                            -->
+<!-- This JSP page wraps a standard EIA header/footer and breadcrumb, title, and gray text around an already existing .HTML file without having to modify the existingin HTML file.      -->
+<!-- ************************************************************** -->
+<HTML>
+<HEAD>
+<TITLE>EIA - State Energy Data System</TITLE>
+<!-- ****************************************** Begin META TAGS ********************************************* -->
+
+<META content=EIA name=agency>
+<META content=general name=audience>
+<META content="united states energy statistics, USA state data" name=subject>
+<!-- ****************************************** End META TAGS *********************************************** -->
+
+<!-- Style Sheets -->
+<LINK href="state.css" type=text/css rel=stylesheet>
+<link rel="stylesheet" href="http://www.eia.gov/styles/eia_sitewideF.css" type="text/css">
+<!-- ******************************************   Javascript  *********************************************** -->
+<script language="JavaScript" src="http://www.eia.gov/styles/eia_header.js" type="text/javascript"></script>
+<script language="JavaScript" src="http://www.eia.gov/styles/eia_footer.js" type="text/javascript"></script>
+<script language="JavaScript" src="java/state.js" type="text/javascript"></script>
+
+</HEAD>
+<!-- Start of Web Page -->
+<BODY bgColor=#ffffff leftMargin=10 rightmargin="10" topMargin=0 marginheight="0" marginwidth="0">
+<!-- Top of page navagation -->
+
+<!-- BEGIN BANNER, & SEARCH -->
+
+<SCRIPT language=JavaScript>InsertEIAHeaderCode();</SCRIPT>
+<!-- END OF SEARCH & BANNER -->
+
+<!-- Insert breadcrums and publication title.  These all depend on either the page it was called from, or by the 'incfile' parameter'.   -->
+<table width="913" border=0 cellpadding=4 cellspacing=0>
+     <!-- Start breadcrums -->
+     <tr> 
+	    <td height="12" colspan="5" valign="TOP">
+           <script language=JavaScript>
+		      var mfrom='sep_sum/plain_html/sum_btu_1.html';
+              if ((document.referrer.indexOf("seds.html") > 0) || (mfrom.indexOf("sep_sum")>=0)) WriteStateBreadcrumbs_html_seds();
+              if ((document.referrer.indexOf("seds_updates.html") > 0) || (mfrom.indexOf("sep_fuel")>=0)) WriteStateBreadcrumbs_html_seds_update();
+              if (document.referrer.indexOf("seds_tech_notes.html") > 0) WriteStateBreadcrumbs_html_tech_notes(); 
+              if (document.referrer.indexOf("state.html") > 0) WriteStateBreadcrumbs_html_state('null');
+           </script>
+        </td>
+     </tr> 
+     <!-- End breadcrums -->
+
+</table>
+<table width="971" border=0 cellpadding=4 cellspacing=0>
+     <!-- Title -->
+     <tr>
+       <th height="5" valign="TOP" class="SectionHead"> <div align="left" class="Pagetitle">
+         <div align="left">
+			SEDS | State Energy Data System
+         </div>
+		 </div>
+       </th>
+
+     </tr>
+</table>
+<!-- End of Title, breadcrums -->	
+<table width=886  border="0">
+<tr height="5"><td></td></tr>
+  <tr>
+ <td width="31">&nbsp;</td>  
+ <!-- Left indent-->
+	<!-- Publication Release Information -->
+	<td width="845"  class="update" valign="top">
+           <script language=JavaScript>
+              if ((document.referrer.indexOf("seds.html") > 0) || (mfrom.indexOf("sep_sum")>=0))  SEDSTimeStamp();
+              if ((document.referrer.indexOf("seds_updates.html") > 0) || (mfrom.indexOf("sep_fuel")>=0)) SEDSUpdateTimeStamp();
+              if (document.referrer.indexOf("state.html") > 0) StateTimeStamp();
+		   </script>
+
+    </td>
+  </tr>
+<tr height="5"><td></td></tr>
+</table>
+
+
+<!-- Beginning of Content -->
+<!--  jsp:include page=null/  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name=GENERATOR content="TPL Tables 6.0 [qqqsoftware.com]">
+<title>Table C1.  Energy Consumption Overview: Estimates by Energy Source and End-Use Sector, 2009                   (Trillion Btu)</title>
+
+</head>
+<body>
+<table border=1 cellspacing=0 >
+<tr><td colspan="14"  align="left"><span style="font-weight:bold;font-size:10pt;font-family:Arial,Helvetica"></span><span style="font-weight:bold;font-size:10pt;font-family:Arial,Helvetica">Table&nbsp;C1.&nbsp;&nbsp;Energy&nbsp;Consumption&nbsp;Overview:&nbsp;Estimates&nbsp;by&nbsp;Energy&nbsp;Source&nbsp;and&nbsp;End-Use&nbsp;Sector,&nbsp;2009<br></span><span style="font-size:10pt;font-family:Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Trillion&nbsp;Btu)</span></td></tr>
+
+<tr><td colspan="1" rowspan="3" align="center" ><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">State</span></td>
+<td  colspan="1" rowspan="3" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Total<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Energy&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">b</span></sup></td>
+<td  colspan="8" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Sources&nbsp;</span></td>
+<td  colspan="4" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">End-Use&nbsp;Sectors&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">a</span></sup></td>
+</tr>
+<tr>
+<td  colspan="4" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Fossil&nbsp;Fuels</span></td>
+
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Nuclear<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Electric<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Power</span></td>
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Renewable<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Energy&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">e</span></sup></td>
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Net<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Interstate<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Flow&nbsp;of<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Electricity/<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Losses&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">f</span></sup></td>
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Net<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Electricity<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Imports&nbsp;</span></td>
+
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Residential</span></td>
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Commercial</span></td>
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Industrial&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">b</span></sup></td>
+<td  colspan="1" rowspan="2" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Transportation</span></td>
+</tr>
+<tr>
+<td  colspan="1" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Coal</span></td>
+<td  colspan="1" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Natural<br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Gas&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">c</span></sup></td>
+
+<td  colspan="1" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Petroleum&nbsp;</span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">d</span></sup></td>
+<td  colspan="1" rowspan="1" align="center"><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica"><br><br></span><span style="font-weight:bold;font-size:7pt;font-family:Arial,Helvetica">Total&nbsp;</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Alabama</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,906.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">631.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">473.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">583.9</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,688.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">415.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">272.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-470.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">383.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">266.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">788.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">469.2</span></td>
+
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Alaska</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">630.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">14.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">344.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">255.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">614.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">16.3</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">53.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">61.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">325.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">190.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Arizona</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,454.3</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">413.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">376.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">520.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,310.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">320.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">103.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-279.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">400.8</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">352.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">207.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">493.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Arkansas</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,054.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">264.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">248.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">343.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">855.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">158.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">126.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-85.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">226.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">167.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">372.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">289.0</span></td>
+
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">California</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8,005.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">52.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,391.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,508.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">5,952.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">332.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">712.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">999.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,527.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,578.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,770.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,129.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Colorado</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,452.2</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">350.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">522.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">471.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,344.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">75.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">32.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">332.7</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">291.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">409.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">417.9</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Connecticut</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">788.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">26.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">187.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">341.3</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">555.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">174.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">38.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">12.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">262.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">197.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">83.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">244.9</span></td>
+
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Delaware</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">254.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">33.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">51.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">91.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">177.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">5.8</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">71.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">64.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">59.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">60.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">70.8</span></td>
+</tr>
+<tr>
+XXXX<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Dist.&nbsp;of&nbsp;Col.</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">182.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">33.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">19.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">53.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">128.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">34.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">124.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">19.2</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Florida</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">4,295.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">581.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,081.8</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,623.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,286.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">304.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">273.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">430.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,294.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,061.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">486.6</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,452.7</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Georgia</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,949.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">723.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">475.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,027.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,226.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">331.4</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">215.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">176.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">723.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">553.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">720.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">952.9</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Hawaii</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">269.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">19.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">230.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">249.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">20.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">35.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">42.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">63.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">128.8</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Idaho</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">509.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">86.8</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">151.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">246.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">141.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">121.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">129.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">84.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">169.9</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">125.0</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Illinois</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,815.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,015.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">946.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,243.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,204.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">998.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">172.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-561.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">943.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">773.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,108.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">989.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Indiana</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,622.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,365.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">511.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">767.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,644.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">119.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-140.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.1</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">523.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">357.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,150.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">592.3</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Iowa</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,418.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">444.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">284.0</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">415.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,144.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">48.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">291.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-66.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">234.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">198.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">682.5</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">302.9</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Kansas</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,084.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">356.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">289.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">384.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,029.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">91.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">66.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-102.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">225.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">197.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">386.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">276.0</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Kentucky</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,876.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">937.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">214.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">663.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,814.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">80.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-17.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">358.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">242.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">811.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">465.2</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Louisiana</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,366.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">252.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,300.3</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,374.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,927.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">175.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">118.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">145.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">358.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">282.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,079.2</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">646.8</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Maine</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">430.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">73.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">200.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">275.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">144.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">6.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">94.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">73.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">139.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">123.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Maryland</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,429.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">266.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">204.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">527.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">998.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">152.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">60.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">218.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">403.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">403.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">155.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">466.9</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Massachusetts</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,426.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">92.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">408.6</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">575.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,076.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">56.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">61.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">216.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">15.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">439.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">289.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">243.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">453.7</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Michigan</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,696.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">735.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">746.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">825.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,308.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">228.6</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">158.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-17.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">19.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">753.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">595.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">611.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">735.9</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Minnesota</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,809.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">328.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">405.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">604.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,338.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">129.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">199.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">114.9</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">26.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">408.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">352.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">576.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">472.4</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Mississippi</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,138.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">141.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">371.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">407.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">920.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">115.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">55.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">47.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">227.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">165.2</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">388.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">356.8</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Missouri</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,817.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">765.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">266.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">658.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,690.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">107.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">83.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-64.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">507.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">397.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">348.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">564.7</span></td>
+</tr>
+
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Montana</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">411.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">172.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">76.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">171.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">421.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">119.9</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-128.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-1.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">87.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">77.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">140.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">106.0</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Nebraska</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">759.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">249.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">164.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">210.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">624.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">98.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">87.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-51.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">153.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">134.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">301.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">170.7</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Nevada</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">707.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">83.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">283.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">242.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">610.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">54.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">42.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">172.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">128.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">191.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">215.1</span></td>
+
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">New&nbsp;Hampshire</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">303.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">32.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">62.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">158.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">253.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">92.2</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">44.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-90.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">88.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">69.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">39.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">105.8</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">New&nbsp;Jersey</span></div></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,393.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">59.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">638.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,078.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,776.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">359.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">54.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">203.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">576.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">623.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">291.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">901.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">New&nbsp;Mexico</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">670.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">306.2</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">247.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">247.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">800.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">35.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-165.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">118.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">122.4</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">227.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">202.4</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">New&nbsp;York</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,818.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">156.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,166.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,423.4</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,745.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">454.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">445.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">139.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">33.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,128.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,233.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">366.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,091.3</span></td>
+
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">North&nbsp;Carolina</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,545.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">678.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">250.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">839.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,768.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">427.3</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">179.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">170.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">712.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">578.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">546.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">708.2</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">North&nbsp;Dakota</span></div></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">426.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">423.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">51.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">125.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">600.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">63.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-240.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2.5</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">66.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">62.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">210.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">87.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Ohio</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,633.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,267.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">768.3</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,165.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,200.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">159.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">114.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">159.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">906.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">678.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,124.4</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">925.2</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Oklahoma</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,490.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">373.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">678.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">488.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,540.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">89.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-138.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">303.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">247.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">518.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">420.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Oregon</span></div></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,066.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">33.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">254.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">361.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">649.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">416.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1.0</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">274.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">208.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">252.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">331.8</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Pennsylvania</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,654.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,223.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">833.7</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,280.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,338.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">808.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">155.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-649.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">918.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">685.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,071.8</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">978.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Rhode&nbsp;Island</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">219.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">94.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">95.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">190.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">6.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">19.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">69.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">56.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">29.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">63.8</span></td>
+</tr>
+
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">South&nbsp;Carolina</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,581.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">372.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">197.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">541.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,110.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">545.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">122.9</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-198.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">352.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">256.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">516.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">456.4</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">South&nbsp;Dakota</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">359.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">37.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">66.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">116.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">220.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">106.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">32.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">(s)</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">69.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">60.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">138.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">91.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Tennessee</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,136.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">477.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">222.6</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">752.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,452.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">282.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">196.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">204.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">515.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">362.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">666.5</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">591.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Texas</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">11,297.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,497.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">3,462.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">5,445.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">10,405.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">434.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">356.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">100.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,611.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,459.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">5,502.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,724.2</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Utah</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">754.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">365.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">223.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">266.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">855.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">21.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-122.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.1</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">165.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">152.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">201.5</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">235.6</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Vermont</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">158.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8.7</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">82.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">90.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">56.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">29.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-26.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">48.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">31.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">24.4</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">53.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Virginia</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,385.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">334.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">330.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">834.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,498.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">295.1</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">144.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">446.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">610.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">589.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">440.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">745.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Washington</span></div></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">2,032.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">84.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">319.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">756.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,160.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">69.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">846.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-22.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-21.1</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">502.4</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">389.8</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">529.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">611.5</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">West&nbsp;Virginia</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">715.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">742.9</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">113.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">212.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,069.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">41.3</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">-395.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">165.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">111.3</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">274.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">165.1</span></td>
+</tr>
+<tr>
+<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Wisconsin</span></div></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,744.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">425.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">392.5</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">532.1</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">1,350.5</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">132.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">161.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">100.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">418.8</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">346.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">548.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">430.4</span></td>
+</tr>
+
+<tr>
+<td  colspan="1"  align="left" bgcolor = "#f3f3f3"  ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">Wyoming</span></div></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">520.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">473.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">145.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">164.9</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">784.6</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">36.0</span></td>
+
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-300.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">-0.1</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">47.7</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">61.3</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">290.2</span></td>
+<td  colspan="1"  align="right"  bgcolor = "#f3f3f3" ><span style="font-size:7pt;font-family:Arial,Helvetica">121.1</span></td>
+</tr>
+<tr>
+XX<td  colspan="1"  align="left" ><div style="margin-left: 0.00pt;margin-right: 6.00pt"><span style="font-size:7pt;font-family:Arial,Helvetica"><br></span><span style="font-size:7pt;font-family:Arial,Helvetica">United&nbsp;States</span></div></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">94,446.9</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">19,693.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">23,348.2</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">35,411.4</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">78,429.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">8,356.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">7,545.7</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">0.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">116.2</span></td>
+
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">21,026.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">17,895.6</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">28,559.0</span></td>
+<td  colspan="1"  align="right" ><span style="font-size:7pt;font-family:Arial,Helvetica">26,965.6</span></td>
+</tr>
+<tr >
+<td colspan="14">
+<table border=0 cellspacing=20 WIDTH="100%">
+<tr>
+<td colspan="7" valign=top WIDTH="50%"><span style="font-size:7pt;font-family:Arial,Helvetica"></span><sup><span style="font-size:6pt;font-family:Arial,Helvetica">a</span></sup><span style="font-size:7pt;font-family:Arial,Helvetica"></span><span style="font-size:7pt;font-family:Arial,Helvetica">End-use&nbsp;sector&nbsp;estimates&nbsp;include&nbsp;electricity&nbsp;sales&nbsp;and&nbsp;associated&nbsp;electrical&nbsp;system&nbsp;energy&nbsp;losses.</span></td>
+
