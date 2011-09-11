@@ -78,7 +78,7 @@ class SpitColumns(http.RESTBase):
                     value = field.rel.to.objects.get(pk=value)
             try:
                 setattr(entity, field.name, value)
-            except ValueError as e:
+            except ValueError, e:
                return http.JSONResponse({'status': 'failure', 'reason': unicode(e)}) 
 
         if entity_name in PREINSERT_CHECKS:
@@ -87,7 +87,7 @@ class SpitColumns(http.RESTBase):
 
         try:
             entity.save()
-        except Exception as e:
+        except Exception, e:
             return http.JSONResponse({'status': 'failure', 'reason': unicode(e)}) 
 
         return http.JSONResponse({'status': 'success'})                 
