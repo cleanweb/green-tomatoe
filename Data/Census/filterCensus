@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+import re
+
+id=1
+for state in range(56):
+	s = "{0:0}".format(state+1)
+	if len(s) == 1:
+		s = "0" + s
+	f = open(s+'.census', 'r')
+	res = str(id)
+	l = f.readline()
+	while l:
+		#if l.find('<th id="p1" class="shaded" align="center" valign="bottom" width="15%"><b>') >= 0:
+		#	print id, l
+	
+		if l.startswith('<td valign="top" id="r'):
+			l = f.readline()
+			#print l
+			m = re.search('(?<=>)[^<]+', l)
+			res = res + "\t" + m.group(0).replace("%","").replace("$","")
+		else:
+			l = f.readline()
+
+	if len(res) > 10:
+		#print len(res)
+		print res
+		id = id + 1
+	

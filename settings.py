@@ -5,6 +5,9 @@ from djangoappengine.settings_base import *
 
 import os
 
+import sys
+from os.path import dirname, normpath, join
+
 # Activate django-dbindexer for the default database
 DATABASES['native'] = DATABASES['default']
 DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
@@ -49,4 +52,6 @@ TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 ROOT_URLCONF = 'urls'
 
+PROJECT_ROOT = normpath(dirname(__file__))
+STATE_DATA_COLUMNS_FILE = join(PROJECT_ROOT, 'columns.txt')
 
