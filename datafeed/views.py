@@ -50,7 +50,7 @@ class SpitColumns(http.RESTBase):
         
         raw_data = []
         IN_LIMIT = 30
-        for i in range(0, math.ceil(len(valid_state_object)/IN_LIMIT)):
+        for i in range(0, math.ceil(float(len(valid_state_object))/IN_LIMIT)):
             in_st = valid_state_object[i*IN_LIMIT:i*IN_LIMIT + IN_LIMIT]
             if not in_st: break
             raw_data.extend(df_models.StateData.objects.filter(state__in=in_st))
