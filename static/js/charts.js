@@ -44,6 +44,14 @@ function barChart(dataset, containerId){
 	var data = datasetToDataTable(dataset);
     
     var chart = new google.visualization.ColumnChart(document.getElementById(containerId));
+        // copy pase all over the place
+        var p = $(document).scrollTop();
+        google.visualization.events.addListener(chart, 'ready', function() {
+            setTimeout(function(){
+                $(document).scrollTop(p);
+            }, 1);
+        });
+        // ------------------------------    
     chart.draw(data, {width: 700, height: 300, 
                       xAxis: {title: 'State', titleTextStyle: {color: 'red'}},
                       isStacked : true, legend : 'bottom'
@@ -55,9 +63,17 @@ function barChart(dataset, containerId){
 function lineChart(dataset, containerId){
 	var data = datasetToDataTable(dataset);
 
-    var chart = new google.visualization.LineChart(document.getElementById(containerId));
+        var chart = new google.visualization.LineChart(document.getElementById(containerId));
+        // copy pase all over the place
+        var p = $(document).scrollTop();
+        google.visualization.events.addListener(chart, 'ready', function() {
+            setTimeout(function(){
+                $(document).scrollTop(p);
+            }, 1);
+        });
+        // ------------------------------    
     chart.draw(data, {width: 700, height: 300, legend : 'bottom'});
-	
+    	
 	_.defer(function(){window.scroll(0, 0);});
 }
 
@@ -102,6 +118,14 @@ function areaChart(dataset, containerId, columnIndex) {
 	var data = datasetToDataTableWithOneColumn(dataset,columnIndex);
 	
 	var chart = new google.visualization.AreaChart(document.getElementById(containerId));
+        // copy pase all over the place
+        var p = $(document).scrollTop();
+        google.visualization.events.addListener(chart, 'ready', function() {
+            setTimeout(function(){
+                $(document).scrollTop(p);
+            }, 1);
+        });
+        // ------------------------------    
     chart.draw(data, {width: 700, height: 300, legend : 'bottom', title: dataset.columns[columnIndex].title});
 
 	var columnSelector = buildColumnSelector(dataset,cols,columnIndex,containerId);
@@ -117,15 +141,22 @@ function areaChart(dataset, containerId, columnIndex) {
 function pieChart(dataset, containerId, columnIndex){
 	var cols = nonStateColumns(dataset);
 	if(columnIndex == undefined) columnIndex = 1;
-	var data = datasetToDataTableWithOneColumn(dataset,columnIndex);
-	
-	 var chart = new google.visualization.PieChart(document.getElementById(containerId));
-	 chart.draw(data, {width: 700, height: 300, legend : 'bottom', title: dataset.columns[columnIndex].title});
+	var data = datasetToDataTableWithOneColumn(dataset,columnIndex);        
+	var chart = new google.visualization.PieChart(document.getElementById(containerId));
+        // copy pase all over the place
+        var p = $(document).scrollTop();
+        google.visualization.events.addListener(chart, 'ready', function() {
+            setTimeout(function(){
+                $(document).scrollTop(p);
+            }, 1);
+        });
+        // ------------------------------
+	 chart.draw(data, {width: 700, height: 300, legend : 'bottom', title: dataset.columns[columnIndex].title});         
 	
 	 var columnSelector = buildColumnSelector(dataset,cols,columnIndex,containerId);
-	 handleColumnSelectionChange(columnSelector, dataset, containerId, pieChart);
-
-	
+	 handleColumnSelectionChange(columnSelector, dataset, containerId, pieChart);	
+        
+         
 }
 
 function mapChart(dataset, containerId, columnIndex){

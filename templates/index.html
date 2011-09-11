@@ -171,6 +171,7 @@
   	window.currentDataset = null;
   	window.currentPerspective = "table";
         window.playgroundSelectedFields = [];
+        window.CHART_loaded = function(){alert('hello!');};
   	
   	$(document).ready(function(){                
                 $("input#field-search-qry").keyup(function(e){
