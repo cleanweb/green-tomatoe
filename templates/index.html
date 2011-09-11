@@ -6,20 +6,17 @@
 			margin: auto auto;
 			width:940px;
 		} 
-        ul.pills li{width:180px;}
-        ul.pills li a {margin:2px 1px;}
-        ul.pills li.selected a{
-            -moz-box-shadow:inset 0 0 3px #001050;
-            -webkit-box-shadow:inset 0 0 3px #001050;
-            box-shadow:inset 0 0 3px #001050;
-        }
-        .span5.columns{width: 190px;}
-        ul.tabs {height:36px; overflow:hidden;}
-        
-        .loader{
-        	background:#ffffff url('/static/img/spinner.gif') no-repeat 50% 20px;
-        }
-        
+                ul.pills li{width:180px;}
+                ul.pills li a {margin:2px 1px;}
+                ul.pills li.selected a{
+                    -moz-box-shadow:inset 0 0 3px #001050;
+                    -webkit-box-shadow:inset 0 0 3px #001050;
+                    box-shadow:inset 0 0 3px #001050;
+                }
+                .span5.columns{width: 190px;}
+                ul.tabs {height:36px;}
+                .dropdown-menu li.active a{background:#BFBFBF;color:black;}
+
 	</style>
 	
 	<script type="text/javascript" src="/static/js/jquery.js"></script>
@@ -91,6 +88,15 @@
 		  <% _.each(views, function(view) { %> 
 		  	<li><a class="data-view-selector" data-view-id="<%= view.id %>" data-fields="<%= view.fields %>" href="#"><%= view.title %></a></li> 
 		  <% }); %>
+                  <li class="dropdown menu-marker">
+                    <a class="dropdown-toggle" href="#">More</a>
+                    <ul class="dropdown-menu">
+                        <% _.each(additionalViews, function(view) { %> 
+		  	    <li><a class="data-view-selector" data-view-id="<%= view.id %>" data-fields="<%= view.fields %>" href="#"><%= view.title %></a></li> 
+		        <% }); %>
+                    </ul>
+
+                  </li>
  	</ul>
   </script>
   
@@ -275,6 +281,9 @@
   			changePerspective(perspective);
   		});
   		
+                $('.menu-marker').click(function(){
+                    $(this).toggleClass('open');
+                });
   		window.dataSnapshotView.selectDefaultView();
   		
   	});

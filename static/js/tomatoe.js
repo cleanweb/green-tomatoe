@@ -123,6 +123,7 @@ var DataSnapshotCollection = Backbone.Collection.extend({
 });
 
 var DataSnaphots = new DataSnapshotCollection;
+var AdditionalDataSnaphots = new DataSnapshotCollection;
 
 // **************************** VIEWS 
 
@@ -154,7 +155,8 @@ var DataSnaphotsView = Backbone.View.extend({
           fields: ["Housingunits","Homeownershiprate","Housingunitsinmultiunitstructurespercent","Medianvalueofowneroccupiedhousingunits"]},
         { id:"Household",
           title:"Household", 
-          fields: ["Households","Personsperhousehold","Percapitamoneyincomeinpastmonthsdollars","Medianhouseholdincome","Personsbelowpovertylevelpercent"]},
+          fields: ["Households","Personsperhousehold","Percapitamoneyincomeinpastmonthsdollars","Medianhouseholdincome","Personsbelowpovertylevelpercent"]}];
+    this.additionalViews = [
         { id:"Business",
           title:"Business",
           fields: ["Privatenonfarmestablishments","Privatenonfarmemployment","Privatenonfarmemploymentpercentchange","Nonemployerestablishments"]},
@@ -186,10 +188,14 @@ var DataSnaphotsView = Backbone.View.extend({
             DataSnaphots.reset(this.activeViews);
         },
 
-  	DataSnaphots.bind('add',this.addOne, this);
+  	DataSnaphots.bind('add', this.addOne, this);
   	DataSnaphots.bind('reset', this.addAll, this);
+
+        AdditionalDataSnaphots.bind('add', this.addOne, this); 
+        AdditionalDataSnaphots.bind('reset', this.addAll, this); 
   	
   	DataSnaphots.reset(this.activeViews);
+        AdditionalDataSnaphots.reset(this.additionalViews);
   },	
 
   addOne : function(){
@@ -205,14 +211,17 @@ var DataSnaphotsView = Backbone.View.extend({
   },
 
   render: function() {
-  	$("#content_nav").html(_.template($("#template-data-views").html())({views : DataSnaphots.toJSON()}));
+  	$("#content_nav").html(_.template($("#template-data-views").html())({views : DataSnaphots.toJSON(), additionalViews : AdditionalDataSnaphots.toJSON()}));
   	
   	$(".data-view-selector").click(_.bind(function(e){	
+                $('ul.tabs li.active').removeClass('active'); 
   		$(e.target).parent().parent().children(".active").removeClass("active");
   		$(e.target).parent().addClass("active");
   		
   		this.selectedView = DataSnaphots.get($(e.target).attr("data-view-id"));
+                if (!this.selectedView) this.selectedView = AdditionalDataSnaphots.get($(e.target).attr("data-view-id"));                
   		this.trigger("selected-view-changed");
+                e.stopPropagation();
   	
   	}, this));
   }
