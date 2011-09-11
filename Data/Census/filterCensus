@@ -2,14 +2,125 @@
 
 import re
 
+
+name={}
+name[1]="Population"
+name[2]="Populationpercentchange"
+name[3]="Population"
+name[4]="Personsunderyearsoldpercent"
+name[5]="Personsunderyearsoldpercent"
+name[6]="Personsyearsoldandoverpercent"
+name[7]="Femalepersonspercent"
+name[8]="Whitepersonspercent"
+name[9]="Blackpersonspercent"
+name[10]="AmericanIndianandAlaskaNativepersonspercent"
+name[11]="Asianpersonspercent"
+name[12]="NativeHawaiianandOtherPacificIslanderpercent"
+name[13]="Personsreportingtwoormoreracespercent"
+name[14]="PersonsofHispanicorLatinooriginpercent"
+name[15]="WhitepersonsnotHispanicpersons"
+name[16]="Livinginsamehouseyearagopctyroldover"
+name[17]="Foreignbornpersonspercent"
+name[18]="LanguageotherthanEnglishspokenathomepctage"
+name[19]="Highschoolgraduatespercentofpersonsage"
+name[20]="Bachelorsdegreeorhigherpctofpersonsage"
+name[21]="Veterans"
+name[22]="Meantraveltimetoworkminutesworkersage"
+name[23]="Housingunits"
+name[24]="Homeownershiprate"
+name[25]="Housingunitsinmultiunitstructurespercent"
+name[26]="Medianvalueofowneroccupiedhousingunits"
+name[27]="Households"
+name[28]="Personsperhousehold"
+name[29]="Percapitamoneyincomeinpastmonthsdollars"
+name[30]="Medianhouseholdincome"
+name[31]="Personsbelowpovertylevelpercent"
+name[32]="Privatenonfarmestablishments"
+name[33]="Privatenonfarmemployment"
+name[34]="Privatenonfarmemploymentpercentchange"
+name[35]="Nonemployerestablishments"
+name[36]="Totalnumberoffirms"
+name[37]="Blackownedfirmspercent"
+name[38]="AmericanIndianandAlaskaNativeownedfirmspercent"
+name[39]="Asianownedfirmspercent"
+name[40]="NativeHawaiianandOtherPacificIslanderownedfirmspercent"
+name[41]="Hispanicownedfirmspercent"
+name[42]="Womenownedfirmspercent"
+name[43]="Manufacturersshipments"
+name[44]="Merchantwholesalersales"
+name[45]="Retailsales"
+name[46]="Retailsalespercapita"
+name[47]="Accommodationandfoodservicessales"
+name[48]="Buildingpermits"
+name[49]="Federalspending"
+name[50]="Landarea"
+name[51]="Personspersquaremile"
+name[52]="FIPSCode"
+
+state={}
+state[1]="AL"
+state[2]="AK"
+state[3]="AZ"
+state[4]="AR"
+state[5]="CA"
+state[6]="CO"
+state[7]="CT"
+state[8]="DE"
+state[9]="FL"
+state[10]="GA"
+state[11]="HI"
+state[12]="ID"
+state[13]="IL"
+state[14]="IN"
+state[15]="IA"
+state[16]="KS"
+state[17]="KY"
+state[18]="LA"
+state[19]="ME"
+state[20]="MD"
+state[21]="MA"
+state[22]="MI"
+state[23]="MN"
+state[24]="MS"
+state[25]="MO"
+state[26]="MT"
+state[27]="NE"
+state[28]="NV"
+state[29]="NH"
+state[30]="NJ"
+state[31]="NM"
+state[32]="NY"
+state[33]="NC"
+state[34]="ND"
+state[35]="OH"
+state[36]="OK"
+state[37]="OR"
+state[38]="PA"
+state[39]="RI"
+state[40]="SC"
+state[41]="SD"
+state[42]="TN"
+state[43]="TX"
+state[44]="UT"
+state[45]="VT"
+state[46]="VA"
+state[47]="WA"
+state[48]="WV"
+state[49]="WI"
+state[50]="WY"
+state[51]=""
+
+#curl -d "datafeed_entity=state_data&state=SSSSSSSS&year=2009&XXXXX=YYYYYYYY" http://localhost:8081/datafeed/
+
 id=1
-for state in range(56):
-	s = "{0:0}".format(state+1)
+for num in range(56):
+	s = "{0:0}".format(num+1)
 	if len(s) == 1:
 		s = "0" + s
 	f = open(s+'.census', 'r')
-	res = str(id)
+	res = "curl -d \"datafeed_entity=state_data&state=" + state[id] + "&year=2009"
 	l = f.readline()
+	col=1
 	while l:
 		#if l.find('<th id="p1" class="shaded" align="center" valign="bottom" width="15%"><b>') >= 0:
 		#	print id, l
@@ -18,11 +129,12 @@ for state in range(56):
 			l = f.readline()
 			#print l
 			m = re.search('(?<=>)[^<]+', l)
-			res = res + "\t" + m.group(0).replace("%","").replace("$","")
+			res = res + "&" + name[col] + "=" + m.group(0).replace("%","").replace("$","")
+			col=col+1
 		else:
 			l = f.readline()
 
-	if len(res) > 10:
+	if len(res) > 80:
 		#print len(res)
 		print res
 		id = id + 1
