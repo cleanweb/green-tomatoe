@@ -1,8 +1,33 @@
 from django.conf import settings
+from django.db import models as base_models
 from django.http import HttpResponseRedirect, HttpResponse
 from djangotoolbox import http
 
 from datafeed import models as df_models
+
+def state_data_check(request):
+    year = request.REQUEST.get('year', None)
+    state_code = request.REQUEST.get('state', None)
+    if not year or not state_code:
+        return False
+    has_data = False
+    try:
+        has_data = df_models.StateData.objects.filter(state__code=state_code, year=year)
+    except:
+        pass 
+
+    return not has_data
+
+
+SUPPORTED_ENTITIES = {
+    'column': df_models.Column,
+    'state': df_models.State,
+    'state_data': df_models.StateData
+}
+
+PREINSERT_CHECKS = {
+    'state_data': state_data_check
+}
 
 class SpitColumns(http.RESTBase):
 
@@ -39,5 +64,29 @@ class SpitColumns(http.RESTBase):
                            {"desc": "", "title": "Coal"}]}
 
         return http.JSONResponse(resp)
+
+    def post(request):
+        entity_name = request.REQUEST.get('datafeed_entity', '').lower()
+
+        if entity_name not in SUPPORTED_ENTITIES:
+            return http.JSONResponse({'status': 'failed', 'reason': 'Unsupported/missing entity.'})
+
+        entity = SUPPORTED_ENTITIES[entity_name]()
+        for field in entity._meta.fields:
+            value = request.REQUEST.get(field.name, None)
+            if isinstance(field, base_models.ForeignKey):
+                value = field.rel.to.objects.get(pk=value)
+            setattr(entity, field.name, value)
+
+        if entity_name in PREINSERT_CHECKS:
+            if not PREINSERT_CHECKS[entity_name](request):
+                return http.JSONResponse({'status': 'failure', 'reason': 'Invalid\duplicating Data'})
+
+        try:
+            entity.save()
+        except Exception as e:
+            return http.JSONResponse({'status': 'failure', 'reason': unicode(e)}) 
+
+        return http.JSONResponse({'status': 'success'})                 
 
 spit_columns = SpitColumns()
